@@ -1,8 +1,16 @@
 <main id="main">
-    <h2>Submit Feedback</h2>
-    <form>
-        <label for="feedback">Your Comments here:</label>
-        <textarea id="feedback" rows="4"></textarea>
-        <button type="submit">Submit</button>
-    </form>
+    <section>
+        <h2>Submit Feedback</h2>
+        <form>
+            <div>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div>
+                <label for="message">Detailed Feedback:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </section>
 </main>
