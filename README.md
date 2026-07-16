@@ -41,3 +41,6 @@ To meet the "Advanced/Intermediate Extension" requirements, the following featur
 
 ## How to View
 Simply open `Home.html` in any modern web browser to begin navigating the portal.
+<br>
+<br>
+<a href="Home.html">Click To Visit </a>
