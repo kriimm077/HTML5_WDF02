@@ -1,0 +1,98 @@
+/* --- COLORS & VARIABLES [2, 3] --- */
+:root {
+    --primary-color: #2c3e50; /* Dark Blue-Grey */
+    --secondary-color: #3498db; /* Bright Blue */
+    --text-color: #333;
+    --bg-color: #f4f7f6;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* --- ACCESSIBILITY [1, 2, 5, 6] --- */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--secondary-color);
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+.skip-link:focus { top: 0; }
+
+/* --- NAVIGATION & HEADER [5, 6] --- */
+header {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+
+nav ul li { margin: 0 10px; }
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover { 
+    border-bottom: 2px solid var(--secondary-color); 
+}
+
+/* --- BREADCRUMBS [1, 7, 8] --- */
+.breadcrumb {
+    padding: 10px 20px;
+    background: #ddd;
+    font-size: 0.9rem;
+}
+
+/* --- MAIN LAYOUT [7, 8] --- */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary-color);
+    color: white;
+    margin-top: 20px;
+}
+
+/* --- LOCATION ANIMATIONS [4, 8] --- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.map-container {
+    margin: 20px 0;
+    border: 5px solid var(--secondary-color);
+    border-radius: 12px;
+    overflow: hidden;
+    animation: fadeInUp 1s ease-out;
+}
+
+.map-container iframe { width: 100%; height: 450px; border: 0; display: block; }
