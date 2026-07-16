@@ -1,8 +1,42 @@
-<main id="main">
-    <h2>Administrative Panel</h2>
-    <p>Note: This page is only accessible to staff and authorized users.</p>
-    <ul>
-        <li><a href="#">Manage Students</a></li>
-        <li><a href="#">System Logs</a></li>
-    </ul>
-</main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - StudentHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header>
+        <h1>StudentHub Portal</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="Admin.html">Admin</a></li>
+                <li><a href="Login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <nav class="breadcrumb" aria-label="Breadcrumb">Home / Admin</nav>
+    <main id="main">
+        <section>
+            <h2>Administrative Control Center</h2>
+            <div class="event-grid">
+                <article class="event-card">
+                    <h3>User Management</h3>
+                    <p>Total Students: 1,240</p>
+                    <button>Manage Users</button>
+                </article>
+                <article class="event-card">
+                    <h3>System Logs</h3>
+                    <p>Last Update: 2 hours ago</p>
+                    <button>View Logs</button>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer><p>&copy; 2026 StudentHub Inc. | Semantic HTML5 Structure [1]</p></footer>
+</body>
+</html>
