@@ -40,7 +40,7 @@ To meet the "Advanced/Intermediate Extension" requirements, the following featur
 *   **Google Maps API** for the location embed.
 
 ## How to View
-Simply open `Home.html` in any modern web browser to begin navigating the portal.
+Simply open <a href="Home.html">` Home.html ` </a> in any modern web browser to begin navigating the portal.
 <br>
 <br>
-<a href="Home.html">Click To Visit </a>
+
