@@ -1,1 +1,152 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments | StudentHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<aside class="sidebar">
+    <div class="logo">Student<span>Hub</span></div>
+
+    <div class="nav-title">Main</div>
+    <a href="Dashboard.html">Dashboard</a>
+    <a href="Profile.html">Profile</a>
+
+    <div class="nav-title">Academics</div>
+    <a href="Attendance.html">Attendance</a>
+    <a href="Timetable.html">Timetable</a>
+    <a href="Assignments.html" class="active">Assignments</a>
+    <a href="StudyMaterials.html">Study Materials</a>
+
+    <div class="nav-title">Campus</div>
+    <a href="Announcements.html">Announcements</a>
+    <a href="Events.html">Events</a>
+    <a href="Clubs.html">Clubs & Communities</a>
+    <a href="CampusServices.html">Campus Services</a>
+
+    <div class="nav-title">Account</div>
+    <a href="Notifications.html">Notifications</a>
+    <a href="Login.html">Logout</a>
+</aside>
+
+<main class="main-content">
+
+<header class="top-header">
+    <div class="page-heading">
+        <h1>Assignments</h1>
+        <p>Track your academic tasks and deadlines.</p>
+    </div>
+
+    <div class="user-profile">
+        <div class="user-avatar">KP</div>
+        <div class="user-info">
+            <strong>Krima Patel</strong>
+            <span>CSE Student</span>
+        </div>
+    </div>
+</header>
+
+<div class="grid-4">
+
+<div class="stat-card">
+<div class="label">Total Assignments</div>
+<div class="value">12</div>
+</div>
+
+<div class="stat-card">
+<div class="label">Pending</div>
+<div class="value">4</div>
+</div>
+
+<div class="stat-card">
+<div class="label">Completed</div>
+<div class="value">7</div>
+</div>
+
+<div class="stat-card">
+<div class="label">Overdue</div>
+<div class="value">1</div>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="filter-bar">
+<div>
+<h2>My Assignments</h2>
+<p class="card-subtitle">Keep track of upcoming academic deadlines.</p>
+</div>
+
+<div>
+<button class="btn btn-primary">All</button>
+<button class="btn btn-outline">Pending</button>
+<button class="btn btn-outline">Completed</button>
+</div>
+</div>
+
+<div class="table-container">
+
+<table>
+
+<thead>
+<tr>
+<th>Assignment</th>
+<th>Subject</th>
+<th>Due Date</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>OSI Model Report</td>
+<td>Computer Networks</td>
+<td>25 July 2026</td>
+<td><span class="badge badge-warning">Pending</span></td>
+<td><a href="#" class="btn btn-outline">View</a></td>
+</tr>
+
+<tr>
+<td>Classes and Objects</td>
+<td>OOP with C++</td>
+<td>28 July 2026</td>
+<td><span class="badge badge-warning">Pending</span></td>
+<td><a href="#" class="btn btn-outline">View</a></td>
+</tr>
+
+<tr>
+<td>Differential Equations</td>
+<td>Mathematics</td>
+<td>20 July 2026</td>
+<td><span class="badge badge-success">Completed</span></td>
+<td><a href="#" class="btn btn-outline">View</a></td>
+</tr>
+
+<tr>
+<td>Logic Gates</td>
+<td>Digital Electronics</td>
+<td>15 July 2026</td>
+<td><span class="badge badge-danger">Overdue</span></td>
+<td><a href="#" class="btn btn-outline">View</a></td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</main>
+
+</body>
+</html>
