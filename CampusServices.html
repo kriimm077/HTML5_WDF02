@@ -1,103 +1,479 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Campus Services | StudentHub</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-<aside class="sidebar">
-    <div class="logo">Student<span>Hub</span></div>
 
-    <div class="nav-title">Main</div>
-    <a href="Dashboard.html">Dashboard</a>
-    <a href="Profile.html">Profile</a>
+    <!-- HEADER -->
 
-    <div class="nav-title">Academics</div>
-    <a href="Attendance.html">Attendance</a>
-    <a href="Timetable.html">Timetable</a>
-    <a href="Assignments.html">Assignments</a>
-    <a href="StudyMaterials.html">Study Materials</a>
+    <header class="main-header">
 
-    <div class="nav-title">Campus</div>
-    <a href="Announcements.html">Announcements</a>
-    <a href="Events.html">Events</a>
-    <a href="Clubs.html">Clubs & Communities</a>
-    <a href="CampusServices.html" class="active">Campus Services</a>
+        <div class="navbar">
 
-    <div class="nav-title">Account</div>
-    <a href="Notifications.html">Notifications</a>
-    <a href="Login.html">Logout</a>
-</aside>
+            <a href="Home.html" class="brand">
+                Student<span>Hub</span>
+            </a>
 
-<main class="main-content">
 
-<header class="top-header">
-    <div class="page-heading">
-        <h1>Campus Services</h1>
-        <p>Quickly access useful services available on campus.</p>
-    </div>
+            <nav class="main-nav" aria-label="Main Navigation">
 
-    <div class="user-profile">
-        <div class="user-avatar">KP</div>
-        <div class="user-info">
-            <strong>Krima Patel</strong>
-            <span>CSE Student</span>
+                <a href="Home.html">Home</a>
+
+                <a href="Dashboard.html">Dashboard</a>
+
+                <a href="Attendance.html">Attendance</a>
+
+                <a href="Timetable.html">Timetable</a>
+
+                <a href="Assignments.html">Assignments</a>
+
+                <a href="StudyMaterials.html">Study Materials</a>
+
+                <a href="Announcements.html">Announcements</a>
+
+                <a href="Events.html">Events</a>
+
+                <a href="Clubs.html">Clubs</a>
+
+                <a href="CampusServices.html" class="active">
+                    Campus Services
+                </a>
+
+                <a href="Notifications.html">Notifications</a>
+
+                <a href="Profile.html">Profile</a>
+
+                <a href="About.html">About</a>
+
+                <a href="Contact.html">Contact</a>
+
+                <a href="FAQ.html">FAQ</a>
+
+                <a href="Feedback.html">Feedback</a>
+
+            </nav>
+
+
+            <div class="nav-buttons">
+
+                <a href="Login.html" class="login-btn">
+                    Login
+                </a>
+
+                <a href="Register.html" class="register-btn">
+                    Register
+                </a>
+
+            </div>
+
         </div>
+
+    </header>
+
+
+
+    <!-- BREADCRUMB -->
+
+    <div class="breadcrumb-container">
+
+        <div class="breadcrumb">
+
+            <a href="Home.html">Home</a>
+
+            <span>/</span>
+
+            <span>Campus Services</span>
+
+        </div>
+
     </div>
-</header>
 
-<div class="grid">
 
-<div class="service-card">
-<div class="icon-box">📚</div>
-<h3>Library</h3>
-<p>Search books, access digital resources, and check library information.</p>
-<a href="#" class="btn btn-outline">Open Library</a>
-</div>
 
-<div class="service-card">
-<div class="icon-box">🍴</div>
-<h3>Cafeteria</h3>
-<p>View cafeteria information, available facilities, and operating timings.</p>
-<a href="#" class="btn btn-outline">View Details</a>
-</div>
+    <!-- MAIN -->
 
-<div class="service-card">
-<div class="icon-box">🏥</div>
-<h3>Medical Center</h3>
-<p>Find information about campus medical support and emergency assistance.</p>
-<a href="#" class="btn btn-outline">View Details</a>
-</div>
+    <main>
 
-<div class="service-card">
-<div class="icon-box">🚌</div>
-<h3>Transportation</h3>
-<p>View transportation routes, schedules, and important travel information.</p>
-<a href="#" class="btn btn-outline">View Routes</a>
-</div>
 
-<div class="service-card">
-<div class="icon-box">💻</div>
-<h3>Computer Labs</h3>
-<p>Check computer lab availability, facilities, and operating timings.</p>
-<a href="#" class="btn btn-outline">View Labs</a>
-</div>
+        <!-- HERO -->
 
-<div class="service-card">
-<div class="icon-box">🤝</div>
-<h3>Student Support</h3>
-<p>Get assistance with academic, administrative, and student-related services.</p>
-<a href="#" class="btn btn-outline">Get Support</a>
-</div>
+        <section class="hero-section">
 
-</div>
 
-</main>
+            <div class="hero-content">
+
+                <p class="hero-label">
+                    STUDENT SUPPORT
+                </p>
+
+                <h1>
+                    Everything you need<br>
+                    <span>on campus.</span>
+                </h1>
+
+                <p class="hero-description">
+
+                    Access essential campus facilities and
+                    student support services from one convenient
+                    StudentHub platform.
+
+                </p>
+
+            </div>
+
+
+            <div class="hero-card">
+
+                <div class="hero-card-header">
+
+                    <span>
+                        Campus Services
+                    </span>
+
+                    <span class="status-dot"></span>
+
+                </div>
+
+
+                <h3>
+                    08 Services Available
+                </h3>
+
+
+                <p>
+                    Find useful facilities and resources
+                    around your campus.
+                </p>
+
+
+                <div class="hero-stats">
+
+                    <div>
+
+                        <strong>08</strong>
+
+                        <span>Services</span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>04</strong>
+
+                        <span>Facilities</span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>24/7</strong>
+
+                        <span>Support</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SERVICES -->
+
+        <section class="home-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        CAMPUS RESOURCES
+                    </p>
+
+                    <h2>
+                        Explore Campus Services
+                    </h2>
+
+                </div>
+
+                <p>
+                    Access facilities and support services
+                    designed for your student experience.
+                </p>
+
+            </div>
+
+
+
+            <div class="quick-access-grid">
+
+
+                <a href="Location.html" class="quick-card">
+
+                    <div class="quick-icon">
+                        01
+                    </div>
+
+                    <h3>
+                        Campus Locations
+                    </h3>
+
+                    <p>
+                        Find important campus locations,
+                        buildings, classrooms, and facilities.
+                    </p>
+
+                    <span class="card-link">
+                        View Locations →
+                    </span>
+
+                </a>
+
+
+
+                <a href="#" class="quick-card">
+
+                    <div class="quick-icon">
+                        02
+                    </div>
+
+                    <h3>
+                        Library
+                    </h3>
+
+                    <p>
+                        Access books, digital resources,
+                        study spaces, and library services.
+                    </p>
+
+                    <span class="card-link">
+                        Library Information →
+                    </span>
+
+                </a>
+
+
+
+                <a href="#" class="quick-card">
+
+                    <div class="quick-icon">
+                        03
+                    </div>
+
+                    <h3>
+                        Student Support
+                    </h3>
+
+                    <p>
+                        Get academic guidance and support
+                        for your student journey.
+                    </p>
+
+                    <span class="card-link">
+                        Get Support →
+                    </span>
+
+                </a>
+
+
+
+                <a href="Contact.html" class="quick-card">
+
+                    <div class="quick-icon">
+                        04
+                    </div>
+
+                    <h3>
+                        Help Desk
+                    </h3>
+
+                    <p>
+                        Contact the administration for
+                        assistance with campus-related queries.
+                    </p>
+
+                    <span class="card-link">
+                        Contact Help Desk →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ADDITIONAL SERVICES -->
+
+        <section class="services-section">
+
+
+            <div class="section-heading center-heading">
+
+                <p class="section-label">
+                    MORE RESOURCES
+                </p>
+
+                <h2>
+                    Useful Student Facilities
+                </h2>
+
+                <p>
+                    Explore additional resources available
+                    to support your academic and campus life.
+                </p>
+
+            </div>
+
+
+            <div class="service-links">
+
+
+                <a href="#">
+
+                    <strong>
+                        Transportation
+                    </strong>
+
+                    <span>
+                        Find campus transport information →
+                    </span>
+
+                </a>
+
+
+                <a href="#">
+
+                    <strong>
+                        Cafeteria
+                    </strong>
+
+                    <span>
+                        View dining facilities and timings →
+                    </span>
+
+                </a>
+
+
+                <a href="#">
+
+                    <strong>
+                        Computer Labs
+                    </strong>
+
+                    <span>
+                        Find available computer lab facilities →
+                    </span>
+
+                </a>
+
+
+                <a href="FAQ.html">
+
+                    <strong>
+                        Need Help?
+                    </strong>
+
+                    <span>
+                        Browse frequently asked questions →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="main-footer">
+
+        <div class="footer-content">
+
+
+            <div>
+
+                <a href="Home.html" class="footer-brand">
+                    Student<span>Hub</span>
+                </a>
+
+                <p>
+                    A centralized platform for students to
+                    manage academics, campus life, and resources.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <a href="Dashboard.html">Dashboard</a>
+
+                <a href="Events.html">Events</a>
+
+                <a href="Clubs.html">Clubs</a>
+
+                <a href="Contact.html">Contact</a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>StudentHub</h3>
+
+                <a href="About.html">About Us</a>
+
+                <a href="FAQ.html">FAQ</a>
+
+                <a href="Feedback.html">Feedback</a>
+
+                <a href="Login.html">Login</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 StudentHub. All rights reserved.
+            </p>
+
+            <p>
+                Student Portal
+            </p>
+
+        </div>
+
+    </footer>
+
 
 </body>
+
 </html>
