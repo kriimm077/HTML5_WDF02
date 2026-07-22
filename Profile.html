@@ -1,11 +1,653 @@
-<main id="main">
-    <section>
-        <h2>My Profile</h2>
-        <article class="location-info">
-            <p><strong>Name:</strong> Clover Student</p>
-            <p><strong>Roll Number:</strong> 25CS067</p>
-            <p><strong>Department:</strong> Computer Science</p>
-            <button>Edit Profile Details</button>
-        </article>
-    </section>
-</main>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Profile | StudentHub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="main-header">
+
+        <div class="navbar">
+
+
+            <a href="Home.html" class="brand">
+                Student<span>Hub</span>
+            </a>
+
+
+            <nav class="main-nav"
+                 aria-label="Main Navigation">
+
+
+                <a href="Home.html">
+                    Home
+                </a>
+
+
+                <a href="Dashboard.html">
+                    Dashboard
+                </a>
+
+
+                <div class="nav-dropdown">
+
+                    <button class="dropdown-btn">
+                        Academics
+                        <span class="arrow">▾</span>
+                    </button>
+
+                    <div class="dropdown-menu">
+
+                        <a href="Attendance.html">
+                            Attendance
+                        </a>
+
+                        <a href="Timetable.html">
+                            Timetable
+                        </a>
+
+                        <a href="Assignments.html">
+                            Assignments
+                        </a>
+
+                        <a href="StudyMaterials.html">
+                            Study Materials
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="nav-dropdown">
+
+                    <button class="dropdown-btn">
+                        Campus Life
+                        <span class="arrow">▾</span>
+                    </button>
+
+                    <div class="dropdown-menu">
+
+                        <a href="Announcements.html">
+                            Announcements
+                        </a>
+
+                        <a href="Events.html">
+                            Events
+                        </a>
+
+                        <a href="Clubs.html">
+                            Clubs & Communities
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="nav-dropdown">
+
+                    <button class="dropdown-btn">
+                        Services
+                        <span class="arrow">▾</span>
+                    </button>
+
+                    <div class="dropdown-menu">
+
+                        <a href="CampusServices.html">
+                            Campus Services
+                        </a>
+
+                        <a href="Location.html">
+                            Campus Location
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <a href="Notifications.html">
+                    Notifications
+                </a>
+
+
+            </nav>
+
+
+            <div class="nav-buttons">
+
+                <a href="Login.html"
+                   class="login-btn">
+                    Login
+                </a>
+
+                <a href="Register.html"
+                   class="register-btn">
+                    Register
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- BREADCRUMB -->
+
+    <div class="breadcrumb-container">
+
+        <div class="breadcrumb">
+
+            <a href="Home.html">
+                Home
+            </a>
+
+            <span>/</span>
+
+            <span>
+                Profile
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- MAIN -->
+
+    <main>
+
+
+        <section class="page-header">
+
+            <p class="section-label">
+                STUDENT ACCOUNT
+            </p>
+
+            <h1>
+                My Profile
+            </h1>
+
+            <p>
+                View and manage your personal and
+                academic information.
+            </p>
+
+        </section>
+
+
+
+        <section class="profile-section">
+
+
+            <!-- PROFILE CARD -->
+
+            <div class="profile-card">
+
+
+                <div class="profile-avatar">
+                    SP
+                </div>
+
+
+                <h2>
+                    Student Name
+                </h2>
+
+
+                <p class="profile-role">
+                    Computer Science Student
+                </p>
+
+
+                <div class="profile-status">
+
+                    <span class="status-dot"></span>
+
+                    Active Student
+
+                </div>
+
+
+                <div class="profile-links">
+
+                    <a href="Dashboard.html">
+                        View Dashboard
+                    </a>
+
+                    <a href="Attendance.html">
+                        View Attendance
+                    </a>
+
+                    <a href="Assignments.html">
+                        My Assignments
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- PERSONAL INFORMATION -->
+
+            <div class="profile-details">
+
+
+                <div class="profile-panel">
+
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <p class="section-label">
+                                PERSONAL INFORMATION
+                            </p>
+
+                            <h2>
+                                Basic Details
+                            </h2>
+
+                        </div>
+
+                        <button class="edit-btn">
+                            Edit Profile
+                        </button>
+
+                    </div>
+
+
+
+                    <div class="profile-info-grid">
+
+
+                        <div>
+
+                            <span>
+                                Full Name
+                            </span>
+
+                            <strong>
+                                Student Name
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Student ID
+                            </span>
+
+                            <strong>
+                                STU2026001
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Email Address
+                            </span>
+
+                            <strong>
+                                student@studenthub.edu
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Phone Number
+                            </span>
+
+                            <strong>
+                                +91 98765 43210
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ACADEMIC INFORMATION -->
+
+                <div class="profile-panel">
+
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <p class="section-label">
+                                ACADEMIC INFORMATION
+                            </p>
+
+                            <h2>
+                                Academic Details
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="profile-info-grid">
+
+
+                        <div>
+
+                            <span>
+                                Programme
+                            </span>
+
+                            <strong>
+                                B.Tech Computer Science
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Year
+                            </span>
+
+                            <strong>
+                                Second Year
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Semester
+                            </span>
+
+                            <strong>
+                                Semester 3
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Academic Year
+                            </span>
+
+                            <strong>
+                                2026 – 2027
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ACCOUNT SETTINGS -->
+
+                <div class="profile-panel">
+
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <p class="section-label">
+                                ACCOUNT
+                            </p>
+
+                            <h2>
+                                Account Settings
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="settings-list">
+
+
+                        <a href="#">
+
+                            <div>
+
+                                <strong>
+                                    Change Password
+                                </strong>
+
+                                <span>
+                                    Update your account password
+                                </span>
+
+                            </div>
+
+                            <span>
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a href="Notifications.html">
+
+                            <div>
+
+                                <strong>
+                                    Notification Preferences
+                                </strong>
+
+                                <span>
+                                    Manage your notifications
+                                </span>
+
+                            </div>
+
+                            <span>
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a href="Feedback.html">
+
+                            <div>
+
+                                <strong>
+                                    Give Feedback
+                                </strong>
+
+                                <span>
+                                    Share your experience
+                                </span>
+
+                            </div>
+
+                            <span>
+                                →
+                            </span>
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="main-footer">
+
+        <div class="footer-content">
+
+
+            <div>
+
+                <a href="Home.html"
+                   class="footer-brand">
+
+                    Student<span>Hub</span>
+
+                </a>
+
+                <p>
+                    A centralized platform for students
+                    to manage academics, campus life,
+                    and resources.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Academics
+                </h3>
+
+                <a href="Attendance.html">
+                    Attendance
+                </a>
+
+                <a href="Timetable.html">
+                    Timetable
+                </a>
+
+                <a href="Assignments.html">
+                    Assignments
+                </a>
+
+                <a href="StudyMaterials.html">
+                    Study Materials
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Campus
+                </h3>
+
+                <a href="Events.html">
+                    Events
+                </a>
+
+                <a href="Clubs.html">
+                    Clubs
+                </a>
+
+                <a href="CampusServices.html">
+                    Campus Services
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Support
+                </h3>
+
+                <a href="About.html">
+                    About Us
+                </a>
+
+                <a href="Contact.html">
+                    Contact
+                </a>
+
+                <a href="FAQ.html">
+                    FAQ
+                </a>
+
+                <a href="Feedback.html">
+                    Feedback
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 StudentHub.
+                All rights reserved.
+            </p>
+
+            <p>
+                Student Portal
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
