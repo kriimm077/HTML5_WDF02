@@ -1,152 +1,639 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>Assignments | StudentHub</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
+
 
 <body>
 
-<aside class="sidebar">
-    <div class="logo">Student<span>Hub</span></div>
+    <a
+        href="#main"
+        class="skip-link"
+    >
+        Skip to content
+    </a>
 
-    <div class="nav-title">Main</div>
-    <a href="Dashboard.html">Dashboard</a>
-    <a href="Profile.html">Profile</a>
 
-    <div class="nav-title">Academics</div>
-    <a href="Attendance.html">Attendance</a>
-    <a href="Timetable.html">Timetable</a>
-    <a href="Assignments.html" class="active">Assignments</a>
-    <a href="StudyMaterials.html">Study Materials</a>
+    <!-- HEADER -->
 
-    <div class="nav-title">Campus</div>
-    <a href="Announcements.html">Announcements</a>
-    <a href="Events.html">Events</a>
-    <a href="Clubs.html">Clubs & Communities</a>
-    <a href="CampusServices.html">Campus Services</a>
+    <header class="main-header">
 
-    <div class="nav-title">Account</div>
-    <a href="Notifications.html">Notifications</a>
-    <a href="Login.html">Logout</a>
-</aside>
+        <div class="navbar">
 
-<main class="main-content">
+            <a
+                href="Home.html"
+                class="brand"
+            >
+                Student<span>Hub</span>
+            </a>
 
-<header class="top-header">
-    <div class="page-heading">
-        <h1>Assignments</h1>
-        <p>Track your academic tasks and deadlines.</p>
-    </div>
 
-    <div class="user-profile">
-        <div class="user-avatar">KP</div>
-        <div class="user-info">
-            <strong>Krima Patel</strong>
-            <span>CSE Student</span>
+            <nav
+                class="main-nav"
+                aria-label="Main Navigation"
+            >
+
+                <a href="Home.html">
+                    Home
+                </a>
+
+                <a href="Dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="Attendance.html">
+                    Attendance
+                </a>
+
+                <a href="Timetable.html">
+                    Timetable
+                </a>
+
+                <a
+                    href="Assignments.html"
+                    class="active"
+                >
+                    Assignments
+                </a>
+
+                <a href="StudyMaterials.html">
+                    Study Materials
+                </a>
+
+                <a href="Announcements.html">
+                    Announcements
+                </a>
+
+                <a href="Events.html">
+                    Events
+                </a>
+
+                <a href="Clubs.html">
+                    Clubs
+                </a>
+
+                <a href="CampusServices.html">
+                    Campus Services
+                </a>
+
+                <a href="Notifications.html">
+                    Notifications
+                </a>
+
+                <a href="Profile.html">
+                    Profile
+                </a>
+
+                <a href="About.html">
+                    About
+                </a>
+
+                <a href="Contact.html">
+                    Contact
+                </a>
+
+                <a href="FAQ.html">
+                    FAQ
+                </a>
+
+                <a href="Feedback.html">
+                    Feedback
+                </a>
+
+            </nav>
+
+
+            <div class="nav-buttons">
+
+                <a
+                    href="Login.html"
+                    class="login-btn"
+                >
+                    Login
+                </a>
+
+                <a
+                    href="Register.html"
+                    class="register-btn"
+                >
+                    Register
+                </a>
+
+            </div>
+
         </div>
+
+    </header>
+
+
+    <!-- BREADCRUMB -->
+
+    <div class="breadcrumb-container">
+
+        <div class="breadcrumb">
+
+            <a href="Home.html">
+                Home
+            </a>
+
+            <span>/</span>
+
+            <span>
+                Assignments
+            </span>
+
+        </div>
+
     </div>
-</header>
 
-<div class="grid-4">
 
-<div class="stat-card">
-<div class="label">Total Assignments</div>
-<div class="value">12</div>
-</div>
+    <main id="main">
 
-<div class="stat-card">
-<div class="label">Pending</div>
-<div class="value">4</div>
-</div>
 
-<div class="stat-card">
-<div class="label">Completed</div>
-<div class="value">7</div>
-</div>
+        <!-- INTRO -->
 
-<div class="stat-card">
-<div class="label">Overdue</div>
-<div class="value">1</div>
-</div>
+        <section class="location-hero">
 
-</div>
+            <div class="location-hero-content">
 
-<div class="card">
+                <p class="section-label">
+                    ACADEMIC WORK
+                </p>
 
-<div class="filter-bar">
-<div>
-<h2>My Assignments</h2>
-<p class="card-subtitle">Keep track of upcoming academic deadlines.</p>
-</div>
+                <h1>
+                    Stay Ahead of Your
+                    <span>Assignments.</span>
+                </h1>
 
-<div>
-<button class="btn btn-primary">All</button>
-<button class="btn btn-outline">Pending</button>
-<button class="btn btn-outline">Completed</button>
-</div>
-</div>
+                <p>
+                    Keep track of your coursework, submission deadlines,
+                    and assignment progress. Organize your academic work
+                    and never miss an important deadline.
+                </p>
 
-<div class="table-container">
+            </div>
 
-<table>
+        </section>
 
-<thead>
-<tr>
-<th>Assignment</th>
-<th>Subject</th>
-<th>Due Date</th>
-<th>Status</th>
-<th>Action</th>
-</tr>
-</thead>
 
-<tbody>
+        <!-- SUMMARY -->
 
-<tr>
-<td>OSI Model Report</td>
-<td>Computer Networks</td>
-<td>25 July 2026</td>
-<td><span class="badge badge-warning">Pending</span></td>
-<td><a href="#" class="btn btn-outline">View</a></td>
-</tr>
+        <section class="home-section">
 
-<tr>
-<td>Classes and Objects</td>
-<td>OOP with C++</td>
-<td>28 July 2026</td>
-<td><span class="badge badge-warning">Pending</span></td>
-<td><a href="#" class="btn btn-outline">View</a></td>
-</tr>
+            <div class="quick-access-grid">
 
-<tr>
-<td>Differential Equations</td>
-<td>Mathematics</td>
-<td>20 July 2026</td>
-<td><span class="badge badge-success">Completed</span></td>
-<td><a href="#" class="btn btn-outline">View</a></td>
-</tr>
 
-<tr>
-<td>Logic Gates</td>
-<td>Digital Electronics</td>
-<td>15 July 2026</td>
-<td><span class="badge badge-danger">Overdue</span></td>
-<td><a href="#" class="btn btn-outline">View</a></td>
-</tr>
+                <div class="quick-card">
 
-</tbody>
+                    <div class="quick-icon">
+                        01
+                    </div>
 
-</table>
+                    <h3>
+                        Pending
+                    </h3>
 
-</div>
+                    <p>
+                        Assignments that are currently waiting
+                        for your submission.
+                    </p>
 
-</div>
+                    <strong class="assignment-number">
+                        04
+                    </strong>
 
-</main>
+                </div>
+
+
+                <div class="quick-card">
+
+                    <div class="quick-icon">
+                        02
+                    </div>
+
+                    <h3>
+                        Due This Week
+                    </h3>
+
+                    <p>
+                        Assignments with deadlines approaching
+                        within the current week.
+                    </p>
+
+                    <strong class="assignment-number">
+                        02
+                    </strong>
+
+                </div>
+
+
+                <div class="quick-card">
+
+                    <div class="quick-icon">
+                        03
+                    </div>
+
+                    <h3>
+                        Submitted
+                    </h3>
+
+                    <p>
+                        Completed assignments submitted
+                        during the current semester.
+                    </p>
+
+                    <strong class="assignment-number">
+                        12
+                    </strong>
+
+                </div>
+
+
+                <div class="quick-card">
+
+                    <div class="quick-icon">
+                        04
+                    </div>
+
+                    <h3>
+                        Completion Rate
+                    </h3>
+
+                    <p>
+                        Your current assignment completion
+                        progress for this semester.
+                    </p>
+
+                    <strong class="assignment-number">
+                        75%
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ASSIGNMENT LIST -->
+
+        <section class="home-section">
+
+            <div class="home-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <p class="section-label">
+                            MY ASSIGNMENTS
+                        </p>
+
+                        <h2>
+                            Assignment Tracker
+                        </h2>
+
+                    </div>
+
+                    <span>
+                        Semester 3
+                    </span>
+
+                </div>
+
+
+                <div class="assignment-list">
+
+
+                    <div class="assignment-item">
+
+                        <div class="assignment-info">
+
+                            <span class="assignment-tag">
+                                Computer Networks
+                            </span>
+
+                            <h3>
+                                OSI Model Research Report
+                            </h3>
+
+                            <p>
+                                Prepare a detailed report explaining
+                                the seven layers of the OSI model.
+                            </p>
+
+                        </div>
+
+                        <div class="assignment-meta">
+
+                            <strong>
+                                Due 25 July
+                            </strong>
+
+                            <span>
+                                Pending
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="assignment-item">
+
+                        <div class="assignment-info">
+
+                            <span class="assignment-tag">
+                                Object Oriented Programming
+                            </span>
+
+                            <h3>
+                                C++ Class and Object Assignment
+                            </h3>
+
+                            <p>
+                                Implement a simple C++ program demonstrating
+                                classes, objects, constructors, and methods.
+                            </p>
+
+                        </div>
+
+                        <div class="assignment-meta">
+
+                            <strong>
+                                Due 28 July
+                            </strong>
+
+                            <span>
+                                Pending
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="assignment-item">
+
+                        <div class="assignment-info">
+
+                            <span class="assignment-tag">
+                                Mathematics
+                            </span>
+
+                            <h3>
+                                Differential Equations Worksheet
+                            </h3>
+
+                            <p>
+                                Complete the assigned problems and submit
+                                the solutions through the student portal.
+                            </p>
+
+                        </div>
+
+                        <div class="assignment-meta">
+
+                            <strong>
+                                Due 30 July
+                            </strong>
+
+                            <span>
+                                Pending
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="assignment-item">
+
+                        <div class="assignment-info">
+
+                            <span class="assignment-tag">
+                                Digital Electronics
+                            </span>
+
+                            <h3>
+                                Logic Gates Practical Report
+                            </h3>
+
+                            <p>
+                                Submit the practical report covering
+                                basic logic gates and truth tables.
+                            </p>
+
+                        </div>
+
+                        <div class="assignment-meta">
+
+                            <strong>
+                                Submitted
+                            </strong>
+
+                            <span>
+                                Completed
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TIPS -->
+
+        <section class="services-section">
+
+            <div class="center-heading">
+
+                <p class="section-label">
+                    STAY ORGANIZED
+                </p>
+
+                <h2>
+                    Manage Your Coursework
+                </h2>
+
+                <p>
+                    Use StudentHub to stay on top of deadlines
+                    and manage your academic responsibilities.
+                </p>
+
+            </div>
+
+
+            <div class="service-links">
+
+                <a href="StudyMaterials.html">
+
+                    <strong>
+                        Study Materials
+                    </strong>
+
+                    <span>
+                        Find resources for your work →
+                    </span>
+
+                </a>
+
+
+                <a href="Timetable.html">
+
+                    <strong>
+                        View Timetable
+                    </strong>
+
+                    <span>
+                        Plan your study time →
+                    </span>
+
+                </a>
+
+
+                <a href="Dashboard.html">
+
+                    <strong>
+                        Dashboard
+                    </strong>
+
+                    <span>
+                        Review your academic overview →
+                    </span>
+
+                </a>
+
+
+                <a href="Feedback.html">
+
+                    <strong>
+                        Give Feedback
+                    </strong>
+
+                    <span>
+                        Share your experience →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="main-footer">
+
+        <div class="footer-content">
+
+            <div>
+
+                <a
+                    href="Home.html"
+                    class="footer-brand"
+                >
+                    Student<span>Hub</span>
+                </a>
+
+                <p>
+                    A centralized platform for students to
+                    manage academics, campus life, and resources.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Academic
+                </h3>
+
+                <a href="Dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="Attendance.html">
+                    Attendance
+                </a>
+
+                <a href="Timetable.html">
+                    Timetable
+                </a>
+
+                <a href="StudyMaterials.html">
+                    Study Materials
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Support
+                </h3>
+
+                <a href="About.html">
+                    About Us
+                </a>
+
+                <a href="FAQ.html">
+                    FAQ
+                </a>
+
+                <a href="Feedback.html">
+                    Feedback
+                </a>
+
+                <a href="Contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 StudentHub. All rights reserved.
+            </p>
+
+            <p>
+                Student Portal
+            </p>
+
+        </div>
+
+    </footer>
 
 </body>
+
 </html>
