@@ -1,94 +1,864 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>Announcements | StudentHub</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-<aside class="sidebar">
-    <div class="logo">Student<span>Hub</span></div>
 
-    <div class="nav-title">Main</div>
-    <a href="Dashboard.html">Dashboard</a>
-    <a href="Profile.html">Profile</a>
+    <!-- =========================
+         HEADER / NAVIGATION
+    ========================== -->
 
-    <div class="nav-title">Academics</div>
-    <a href="Attendance.html">Attendance</a>
-    <a href="Timetable.html">Timetable</a>
-    <a href="Assignments.html">Assignments</a>
-    <a href="StudyMaterials.html">Study Materials</a>
+    <header class="main-header">
 
-    <div class="nav-title">Campus</div>
-    <a href="Announcements.html" class="active">Announcements</a>
-    <a href="Events.html">Events</a>
-    <a href="Clubs.html">Clubs & Communities</a>
-    <a href="CampusServices.html">Campus Services</a>
+        <div class="navbar">
 
-    <div class="nav-title">Account</div>
-    <a href="Notifications.html">Notifications</a>
-    <a href="Login.html">Logout</a>
-</aside>
 
-<main class="main-content">
+            <a href="Home.html" class="brand">
 
-<header class="top-header">
-    <div class="page-heading">
-        <h1>Announcements</h1>
-        <p>Stay updated with important campus information.</p>
-    </div>
+                Student<span>Hub</span>
 
-    <div class="user-profile">
-        <div class="user-avatar">KP</div>
-        <div class="user-info">
-            <strong>Krima Patel</strong>
-            <span>CSE Student</span>
+            </a>
+
+
+            <nav class="main-nav"
+                 aria-label="Main Navigation">
+
+
+                <a href="Home.html">
+                    Home
+                </a>
+
+
+                <a href="Dashboard.html">
+                    Dashboard
+                </a>
+
+
+                <a href="Attendance.html">
+                    Attendance
+                </a>
+
+
+                <a href="Timetable.html">
+                    Timetable
+                </a>
+
+
+                <a href="Assignments.html">
+                    Assignments
+                </a>
+
+
+                <a href="StudyMaterials.html">
+                    Study Materials
+                </a>
+
+
+                <a href="Announcements.html"
+                   class="active">
+
+                    Announcements
+
+                </a>
+
+
+                <a href="Events.html">
+                    Events
+                </a>
+
+
+                <a href="Clubs.html">
+                    Clubs
+                </a>
+
+
+                <a href="CampusServices.html">
+                    Campus Services
+                </a>
+
+
+                <a href="Notifications.html">
+                    Notifications
+                </a>
+
+
+                <a href="Profile.html">
+                    Profile
+                </a>
+
+
+                <a href="About.html">
+                    About
+                </a>
+
+
+                <a href="Contact.html">
+                    Contact
+                </a>
+
+
+                <a href="FAQ.html">
+                    FAQ
+                </a>
+
+
+                <a href="Feedback.html">
+                    Feedback
+                </a>
+
+
+            </nav>
+
+
+            <div class="nav-buttons">
+
+
+                <a href="Login.html"
+                   class="login-btn">
+
+                    Login
+
+                </a>
+
+
+                <a href="Register.html"
+                   class="register-btn">
+
+                    Register
+
+                </a>
+
+
+            </div>
+
+
         </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         BREADCRUMB
+    ========================== -->
+
+    <div class="breadcrumb-container">
+
+        <div class="breadcrumb">
+
+            <a href="Home.html">
+                Home
+            </a>
+
+            <span>/</span>
+
+            <span>
+                Announcements
+            </span>
+
+        </div>
+
     </div>
-</header>
 
-<div class="card">
 
-<div class="filter-bar">
-<h2>Latest Announcements</h2>
 
-<div>
-<button class="btn btn-primary">All</button>
-<button class="btn btn-outline">Academic</button>
-<button class="btn btn-outline">Events</button>
-</div>
-</div>
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
 
-<div class="announcement">
-<h3>Mid-Semester Examination Schedule Released</h3>
-<p>The mid-semester examination schedule has been published. Students are requested to check the examination timetable.</p>
-<div class="announcement-date">20 July 2026 · Academic</div>
-</div>
+    <main>
 
-<div class="announcement">
-<h3>Computer Networks Assignment Reminder</h3>
-<p>Students are requested to submit their Computer Networks assignment before the specified due date.</p>
-<div class="announcement-date">18 July 2026 · Academic</div>
-</div>
 
-<div class="announcement">
-<h3>Annual Technical Fest Registration Open</h3>
-<p>Registration for the upcoming technical festival is now open. Students can register through the Events section.</p>
-<div class="announcement-date">15 July 2026 · Events</div>
-</div>
+        <!-- HERO -->
 
-<div class="announcement">
-<h3>Library Timings Updated</h3>
-<p>The library will remain open until 8:00 PM on weekdays during the examination preparation period.</p>
-<div class="announcement-date">12 July 2026 · General</div>
-</div>
+        <section class="hero-section">
 
-</div>
 
-</main>
+            <div class="hero-content">
+
+
+                <p class="hero-label">
+
+                    CAMPUS INFORMATION
+
+                </p>
+
+
+                <h1>
+
+                    Stay informed.<br>
+
+                    Stay <span>connected.</span>
+
+                </h1>
+
+
+                <p class="hero-description">
+
+                    Find the latest academic notices, examination
+                    updates, campus information, and important
+                    announcements from StudentHub.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="hero-card">
+
+
+                <div class="hero-card-header">
+
+                    <span>
+                        Announcement Overview
+                    </span>
+
+                    <span class="status-dot"></span>
+
+                </div>
+
+
+                <h3>
+                    05 Recent Updates
+                </h3>
+
+
+                <p>
+
+                    Check the latest information
+                    shared by your institution.
+
+                </p>
+
+
+                <div class="hero-stats">
+
+
+                    <div>
+
+                        <strong>
+                            05
+                        </strong>
+
+                        <span>
+                            New
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            12
+                        </strong>
+
+                        <span>
+                            This Month
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            03
+                        </strong>
+
+                        <span>
+                            Important
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             ANNOUNCEMENTS
+        ========================== -->
+
+        <section class="home-section">
+
+
+            <div class="section-heading">
+
+
+                <div>
+
+                    <p class="section-label">
+
+                        LATEST UPDATES
+
+                    </p>
+
+
+                    <h2>
+
+                        Campus Announcements
+
+                    </h2>
+
+                </div>
+
+
+                <p>
+
+                    Important information and notices
+                    for the StudentHub community.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="home-panel">
+
+
+
+                <!-- Announcement 1 -->
+
+
+                <div class="announcement-item">
+
+
+                    <div class="announcement-date">
+
+                        <strong>
+                            20
+                        </strong>
+
+                        <span>
+                            JUL
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+
+                        <h3>
+
+                            Mid-Semester Examination Schedule Released
+
+                        </h3>
+
+
+                        <p>
+
+                            The mid-semester examination schedule
+                            has been released. Students are advised
+                            to check the examination dates and
+                            prepare accordingly.
+
+                        </p>
+
+
+                        <span class="card-link">
+
+                            Academic Notice
+
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Announcement 2 -->
+
+
+                <div class="announcement-item">
+
+
+                    <div class="announcement-date">
+
+                        <strong>
+                            18
+                        </strong>
+
+                        <span>
+                            JUL
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+
+                        <h3>
+
+                            Computer Networks Assignment Reminder
+
+                        </h3>
+
+
+                        <p>
+
+                            Students enrolled in the Computer Networks
+                            course are reminded to submit their
+                            assignment before the specified deadline.
+
+                        </p>
+
+
+                        <span class="card-link">
+
+                            Assignment Notice
+
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Announcement 3 -->
+
+
+                <div class="announcement-item">
+
+
+                    <div class="announcement-date">
+
+                        <strong>
+                            15
+                        </strong>
+
+                        <span>
+                            JUL
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+
+                        <h3>
+
+                            Technical Fest Registration Open
+
+                        </h3>
+
+
+                        <p>
+
+                            Registration for the annual technical fest
+                            is now open. Students can participate in
+                            coding competitions, workshops, and
+                            technical events.
+
+                        </p>
+
+
+                        <span class="card-link">
+
+                            Campus Event
+
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Announcement 4 -->
+
+
+                <div class="announcement-item">
+
+
+                    <div class="announcement-date">
+
+                        <strong>
+                            12
+                        </strong>
+
+                        <span>
+                            JUL
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+
+                        <h3>
+
+                            Library Timings Extended
+
+                        </h3>
+
+
+                        <p>
+
+                            To support students during examination
+                            preparation, the campus library will
+                            remain open until 8:00 PM on weekdays.
+
+                        </p>
+
+
+                        <span class="card-link">
+
+                            Campus Service
+
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Announcement 5 -->
+
+
+                <div class="announcement-item">
+
+
+                    <div class="announcement-date">
+
+                        <strong>
+                            10
+                        </strong>
+
+                        <span>
+                            JUL
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+
+                        <h3>
+
+                            Semester Registration Process
+
+                        </h3>
+
+
+                        <p>
+
+                            Students are requested to verify their
+                            course registration details and contact
+                            the academic office if any correction
+                            is required.
+
+                        </p>
+
+
+                        <span class="card-link">
+
+                            Academic Information
+
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             IMPORTANT INFORMATION
+        ========================== -->
+
+        <section class="services-section">
+
+
+            <div class="section-heading center-heading">
+
+
+                <p class="section-label">
+
+                    USEFUL RESOURCES
+
+                </p>
+
+
+                <h2>
+
+                    Explore StudentHub
+
+                </h2>
+
+
+                <p>
+
+                    Find more information and manage
+                    your academic and campus activities.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="service-links">
+
+
+                <a href="Notifications.html">
+
+                    <strong>
+
+                        Notifications
+
+                    </strong>
+
+                    <span>
+
+                        View your latest alerts and reminders →
+
+                    </span>
+
+                </a>
+
+
+
+                <a href="Events.html">
+
+                    <strong>
+
+                        Upcoming Events
+
+                    </strong>
+
+                    <span>
+
+                        Discover upcoming campus activities →
+
+                    </span>
+
+                </a>
+
+
+
+                <a href="Assignments.html">
+
+                    <strong>
+
+                        Assignments
+
+                    </strong>
+
+                    <span>
+
+                        Check deadlines and pending work →
+
+                    </span>
+
+                </a>
+
+
+
+                <a href="Dashboard.html">
+
+                    <strong>
+
+                        Student Dashboard
+
+                    </strong>
+
+                    <span>
+
+                        View your academic overview →
+
+                    </span>
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+
+    <footer class="main-footer">
+
+
+        <div class="footer-content">
+
+
+            <div>
+
+
+                <a href="Home.html"
+                   class="footer-brand">
+
+                    Student<span>Hub</span>
+
+                </a>
+
+
+                <p>
+
+                    A centralized platform for students
+                    to manage academics, campus life,
+                    and resources.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+
+                <h3>
+                    Quick Links
+                </h3>
+
+
+                <a href="Dashboard.html">
+                    Dashboard
+                </a>
+
+
+                <a href="Announcements.html">
+                    Announcements
+                </a>
+
+
+                <a href="Events.html">
+                    Events
+                </a>
+
+
+                <a href="Contact.html">
+                    Contact
+                </a>
+
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+
+                <h3>
+                    StudentHub
+                </h3>
+
+
+                <a href="About.html">
+                    About Us
+                </a>
+
+
+                <a href="FAQ.html">
+                    FAQ
+                </a>
+
+
+                <a href="Feedback.html">
+                    Feedback
+                </a>
+
+
+                <a href="Login.html">
+                    Login
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+
+            <p>
+
+                © 2026 StudentHub.
+                All rights reserved.
+
+            </p>
+
+
+            <p>
+
+                Student Portal
+
+            </p>
+
+
+        </div>
+
+
+    </footer>
+
 
 </body>
+
 </html>
