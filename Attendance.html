@@ -1,1 +1,158 @@
 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance | StudentHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<aside class="sidebar">
+    <div class="logo">Student<span>Hub</span></div>
+
+    <div class="nav-title">Main</div>
+    <a href="Dashboard.html">Dashboard</a>
+    <a href="Profile.html">Profile</a>
+
+    <div class="nav-title">Academics</div>
+    <a href="Attendance.html" class="active">Attendance</a>
+    <a href="Timetable.html">Timetable</a>
+    <a href="Assignments.html">Assignments</a>
+    <a href="StudyMaterials.html">Study Materials</a>
+
+    <div class="nav-title">Campus</div>
+    <a href="Announcements.html">Announcements</a>
+    <a href="Events.html">Events</a>
+    <a href="Clubs.html">Clubs & Communities</a>
+    <a href="CampusServices.html">Campus Services</a>
+
+    <div class="nav-title">Account</div>
+    <a href="Notifications.html">Notifications</a>
+    <a href="Login.html">Logout</a>
+</aside>
+
+<main class="main-content">
+
+    <header class="top-header">
+        <div class="page-heading">
+            <h1>Attendance</h1>
+            <p>Track your attendance across all subjects.</p>
+        </div>
+
+        <div class="user-profile">
+            <div class="user-avatar">KP</div>
+            <div class="user-info">
+                <strong>Krima Patel</strong>
+                <span>CSE Student</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="grid-4">
+
+        <div class="stat-card">
+            <div class="label">Overall Attendance</div>
+            <div class="value">85%</div>
+            <div class="description">Good standing</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="label">Total Classes</div>
+            <div class="value">150</div>
+            <div class="description">This semester</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="label">Classes Attended</div>
+            <div class="value">128</div>
+            <div class="description">Present</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="label">Classes Missed</div>
+            <div class="value">22</div>
+            <div class="description">Total absences</div>
+        </div>
+
+    </div>
+
+    <div class="card">
+        <h2>Subject-wise Attendance</h2>
+        <p class="card-subtitle">Your current attendance record for this semester.</p>
+
+        <div class="table-container">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Total Classes</th>
+                        <th>Present</th>
+                        <th>Attendance</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Computer Networks</td>
+                        <td>30</td>
+                        <td>27</td>
+                        <td>90%</td>
+                        <td><span class="badge badge-success">Good</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>OOP with C++</td>
+                        <td>30</td>
+                        <td>26</td>
+                        <td>87%</td>
+                        <td><span class="badge badge-success">Good</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Engineering Mathematics</td>
+                        <td>30</td>
+                        <td>24</td>
+                        <td>80%</td>
+                        <td><span class="badge badge-warning">Monitor</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Digital Electronics</td>
+                        <td>30</td>
+                        <td>25</td>
+                        <td>83%</td>
+                        <td><span class="badge badge-success">Good</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Engineering Graphics</td>
+                        <td>30</td>
+                        <td>28</td>
+                        <td>93%</td>
+                        <td><span class="badge badge-success">Excellent</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Attendance Alert</h2>
+        <p class="card-subtitle">
+            Your attendance in Engineering Mathematics is currently 80%.
+            Keep attending upcoming classes to maintain the required attendance level.
+        </p>
+    </div>
+
+</main>
+
+</body>
+</html>
