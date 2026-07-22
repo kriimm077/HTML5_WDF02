@@ -1569,3 +1569,786 @@ main {
     }
 
 }
+
+/* ========================================
+   INNER PAGE HEADER
+======================================== */
+
+.page-header {
+
+    text-align: center;
+
+    max-width: 750px;
+
+    margin: 70px auto 45px;
+
+    padding: 0 25px;
+
+}
+
+
+.page-header h1 {
+
+    font-size: 42px;
+
+    letter-spacing: -1px;
+
+    color: #172033;
+
+    margin-bottom: 15px;
+
+}
+
+
+.page-header > p:last-child {
+
+    color: #7a8497;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+
+/* ========================================
+   FORM SECTION
+======================================== */
+
+.form-section {
+
+    max-width: 850px;
+
+    margin: 0 auto 90px;
+
+    padding: 0 25px;
+
+}
+
+
+.form-card {
+
+    background-color: #ffffff;
+
+    border: 1px solid #e3e8f0;
+
+    border-radius: 14px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 12px 35px rgba(30, 55, 90, 0.05);
+
+}
+
+
+.form-card-header {
+
+    margin-bottom: 30px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #edf0f5;
+
+}
+
+
+.form-card h2 {
+
+    font-size: 24px;
+
+    color: #172033;
+
+    margin-bottom: 7px;
+
+}
+
+
+.form-card-header p,
+.form-intro {
+
+    color: #7a8497;
+
+    font-size: 14px;
+
+}
+
+
+/* ========================================
+   FORM ELEMENTS
+======================================== */
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.form-group label {
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #344054;
+
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #d8dee9;
+
+    border-radius: 7px;
+
+    background-color: #ffffff;
+
+    color: #172033;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: all 0.2s ease;
+
+}
+
+
+.form-group textarea {
+
+    resize: vertical;
+
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
+
+}
+
+
+/* ========================================
+   RATING OPTIONS
+======================================== */
+
+.rating-options {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+}
+
+
+.rating-options label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-weight: 500;
+
+    color: #667085;
+
+}
+
+
+.rating-options input {
+
+    accent-color: #2563eb;
+
+}
+
+
+/* ========================================
+   CONTACT PAGE
+======================================== */
+
+.contact-section {
+
+    max-width: 1100px;
+
+    margin: 0 auto 90px;
+
+    padding: 0 25px;
+
+    display: grid;
+
+    grid-template-columns:
+        0.9fr 1.1fr;
+
+    gap: 30px;
+
+    align-items: start;
+
+}
+
+
+.contact-info {
+
+    background-color: #172033;
+
+    color: #ffffff;
+
+    padding: 40px;
+
+    border-radius: 14px;
+
+}
+
+
+.contact-info-header {
+
+    margin-bottom: 35px;
+
+}
+
+
+.contact-info-header h2 {
+
+    font-size: 28px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.contact-info-header > p:last-child {
+
+    color: #aab4c5;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+.contact-detail {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+    padding: 20px 0;
+
+    border-top: 1px solid #2c374a;
+
+}
+
+
+.contact-icon {
+
+    min-width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #263653;
+
+    color: #60a5fa;
+
+    border-radius: 7px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+.contact-detail h3 {
+
+    font-size: 14px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.contact-detail p {
+
+    color: #aab4c5;
+
+    font-size: 13px;
+
+}
+
+
+/* ========================================
+   PROFILE PAGE
+======================================== */
+
+.profile-section {
+
+    max-width: 1100px;
+
+    margin: 0 auto 90px;
+
+    padding: 0 25px;
+
+    display: grid;
+
+    grid-template-columns:
+        280px 1fr;
+
+    gap: 25px;
+
+    align-items: start;
+
+}
+
+
+.profile-card {
+
+    background-color: #ffffff;
+
+    border: 1px solid #e3e8f0;
+
+    border-radius: 14px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    position: sticky;
+
+    top: 100px;
+
+}
+
+
+.profile-avatar {
+
+    width: 80px;
+
+    height: 80px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #eff6ff;
+
+    color: #2563eb;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+}
+
+
+.profile-card h2 {
+
+    font-size: 20px;
+
+    color: #172033;
+
+    margin-bottom: 5px;
+
+}
+
+
+.profile-role {
+
+    color: #7a8497;
+
+    font-size: 13px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.profile-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 7px 12px;
+
+    background-color: #f0fdf4;
+
+    color: #15803d;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+.profile-status .status-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+}
+
+
+.profile-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-top: 28px;
+
+    border-top: 1px solid #edf0f5;
+
+}
+
+
+.profile-links a {
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #edf0f5;
+
+    color: #526078;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    transition: color 0.2s ease;
+
+}
+
+
+.profile-links a:hover {
+
+    color: #2563eb;
+
+}
+
+
+/* ========================================
+   PROFILE PANELS
+======================================== */
+
+.profile-details {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+.profile-panel {
+
+    background-color: #ffffff;
+
+    border: 1px solid #e3e8f0;
+
+    border-radius: 14px;
+
+    padding: 30px;
+
+}
+
+
+.edit-btn {
+
+    padding: 8px 14px;
+
+    background-color: #eff6ff;
+
+    border: none;
+
+    border-radius: 6px;
+
+    color: #2563eb;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+}
+
+
+.edit-btn:hover {
+
+    background-color: #dbeafe;
+
+}
+
+
+.profile-info-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #edf0f5;
+
+}
+
+
+.profile-info-grid div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.profile-info-grid span {
+
+    color: #8490a5;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.profile-info-grid strong {
+
+    color: #27344d;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+/* ========================================
+   PROFILE SETTINGS
+======================================== */
+
+.settings-list {
+
+    border-top: 1px solid #edf0f5;
+
+}
+
+
+.settings-list a {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid #edf0f5;
+
+}
+
+
+.settings-list a div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+}
+
+
+.settings-list strong {
+
+    color: #27344d;
+
+    font-size: 14px;
+
+}
+
+
+.settings-list span {
+
+    color: #8490a5;
+
+    font-size: 12px;
+
+}
+
+
+.settings-list a > span {
+
+    color: #2563eb;
+
+    font-size: 18px;
+
+}
+
+
+.settings-list a:hover strong {
+
+    color: #2563eb;
+
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 800px) {
+
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .contact-section {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .profile-section {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .profile-card {
+
+        position: static;
+
+    }
+
+
+}
+
+
+@media (max-width: 600px) {
+
+
+    .page-header {
+
+        margin-top: 50px;
+
+    }
+
+
+    .page-header h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .form-card {
+
+        padding: 25px;
+
+    }
+
+
+    .contact-info {
+
+        padding: 30px 25px;
+
+    }
+
+
+    .profile-panel {
+
+        padding: 25px;
+
+    }
+
+
+    .profile-info-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+    }
+
+
+    .rating-options {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+}
