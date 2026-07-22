@@ -1,107 +1,489 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Clubs & Communities | StudentHub</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-<aside class="sidebar">
-    <div class="logo">Student<span>Hub</span></div>
 
-    <div class="nav-title">Main</div>
-    <a href="Dashboard.html">Dashboard</a>
-    <a href="Profile.html">Profile</a>
+    <!-- =========================
+         HEADER / NAVIGATION
+    ========================== -->
 
-    <div class="nav-title">Academics</div>
-    <a href="Attendance.html">Attendance</a>
-    <a href="Timetable.html">Timetable</a>
-    <a href="Assignments.html">Assignments</a>
-    <a href="StudyMaterials.html">Study Materials</a>
+    <header class="main-header">
 
-    <div class="nav-title">Campus</div>
-    <a href="Announcements.html">Announcements</a>
-    <a href="Events.html">Events</a>
-    <a href="Clubs.html" class="active">Clubs & Communities</a>
-    <a href="CampusServices.html">Campus Services</a>
+        <div class="navbar">
 
-    <div class="nav-title">Account</div>
-    <a href="Notifications.html">Notifications</a>
-    <a href="Login.html">Logout</a>
-</aside>
+            <a href="Home.html" class="brand">
+                Student<span>Hub</span>
+            </a>
 
-<main class="main-content">
 
-<header class="top-header">
-    <div class="page-heading">
-        <h1>Clubs & Communities</h1>
-        <p>Discover communities, explore your interests, and connect with students.</p>
-    </div>
+            <nav class="main-nav" aria-label="Main Navigation">
 
-    <div class="user-profile">
-        <div class="user-avatar">KP</div>
-        <div class="user-info">
-            <strong>Krima Patel</strong>
-            <span>CSE Student</span>
+                <a href="Home.html">Home</a>
+
+                <a href="Dashboard.html">Dashboard</a>
+
+                <a href="Attendance.html">Attendance</a>
+
+                <a href="Timetable.html">Timetable</a>
+
+                <a href="Assignments.html">Assignments</a>
+
+                <a href="StudyMaterials.html">Study Materials</a>
+
+                <a href="Announcements.html">Announcements</a>
+
+                <a href="Events.html">Events</a>
+
+                <a href="Clubs.html" class="active">Clubs</a>
+
+                <a href="CampusServices.html">Campus Services</a>
+
+                <a href="Notifications.html">Notifications</a>
+
+                <a href="Profile.html">Profile</a>
+
+                <a href="About.html">About</a>
+
+                <a href="Contact.html">Contact</a>
+
+                <a href="FAQ.html">FAQ</a>
+
+                <a href="Feedback.html">Feedback</a>
+
+            </nav>
+
+
+            <div class="nav-buttons">
+
+                <a href="Login.html" class="login-btn">
+                    Login
+                </a>
+
+                <a href="Register.html" class="register-btn">
+                    Register
+                </a>
+
+            </div>
+
         </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         BREADCRUMB
+    ========================== -->
+
+    <div class="breadcrumb-container">
+
+        <div class="breadcrumb">
+
+            <a href="Home.html">Home</a>
+
+            <span>/</span>
+
+            <span>Clubs & Communities</span>
+
+        </div>
+
     </div>
-</header>
 
-<div class="filter-bar">
-<input type="text" class="search-box" placeholder="Search clubs...">
-<button class="btn btn-primary">My Clubs</button>
-</div>
 
-<div class="grid">
 
-<div class="club-card">
-<div class="icon-box">💻</div>
-<h3>Coding Club</h3>
-<p>Learn programming, participate in coding competitions, and collaborate on exciting projects.</p>
-<a href="#" class="btn btn-outline">View Club</a>
-</div>
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
 
-<div class="club-card">
-<div class="icon-box">🤖</div>
-<h3>Robotics Club</h3>
-<p>Explore robotics, Arduino, embedded systems, and automation through practical projects.</p>
-<a href="#" class="btn btn-outline">View Club</a>
-</div>
+    <main>
 
-<div class="club-card">
-<div class="icon-box">📷</div>
-<h3>Photography Club</h3>
-<p>Share your photography skills and participate in creative campus photography activities.</p>
-<a href="#" class="btn btn-outline">View Club</a>
-</div>
 
-<div class="club-card">
-<div class="icon-box">🎨</div>
-<h3>Creative Club</h3>
-<p>Explore art, design, storytelling, and other creative activities with fellow students.</p>
-<a href="#" class="btn btn-outline">View Club</a>
-</div>
+        <!-- HERO SECTION -->
 
-<div class="club-card">
-<div class="icon-box">🌱</div>
-<h3>Eco Club</h3>
-<p>Participate in sustainability initiatives and contribute to a greener campus.</p>
-<a href="#" class="btn btn-outline">View Club</a>
-</div>
+        <section class="hero-section">
 
-<div class="club-card">
-<div class="icon-box">🏆</div>
-<h3>Entrepreneurship Club</h3>
-<p>Explore startup ideas, innovation, business concepts, and entrepreneurial opportunities.</p>
-<a href="#" class="btn btn-outline">View Club</a>
-</div>
 
-</div>
+            <div class="hero-content">
 
-</main>
+                <p class="hero-label">
+                    CAMPUS COMMUNITY
+                </p>
+
+                <h1>
+                    Find your community.<br>
+                    <span>Build your passion.</span>
+                </h1>
+
+                <p class="hero-description">
+
+                    Explore student clubs and communities,
+                    meet like-minded people, develop new skills,
+                    and make the most of your campus experience.
+
+                </p>
+
+            </div>
+
+
+            <div class="hero-card">
+
+                <div class="hero-card-header">
+
+                    <span>
+                        Club Overview
+                    </span>
+
+                    <span class="status-dot"></span>
+
+                </div>
+
+
+                <h3>
+                    12 Active Clubs
+                </h3>
+
+
+                <p>
+                    Discover opportunities to learn,
+                    participate, and connect.
+                </p>
+
+
+                <div class="hero-stats">
+
+                    <div>
+
+                        <strong>12</strong>
+
+                        <span>Clubs</span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>08</strong>
+
+                        <span>Communities</span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>24</strong>
+
+                        <span>Activities</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CLUB CATEGORIES
+        ========================== -->
+
+        <section class="home-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        EXPLORE
+                    </p>
+
+                    <h2>
+                        Student Clubs & Communities
+                    </h2>
+
+                </div>
+
+                <p>
+                    Find a club that matches your interests
+                    and discover new opportunities.
+                </p>
+
+            </div>
+
+
+
+            <div class="quick-access-grid">
+
+
+                <a href="#" class="quick-card">
+
+                    <div class="quick-icon">
+                        01
+                    </div>
+
+                    <h3>
+                        Technical Club
+                    </h3>
+
+                    <p>
+                        Participate in coding competitions,
+                        hackathons, workshops, and technology
+                        projects.
+                    </p>
+
+                    <span class="card-link">
+                        Explore Club →
+                    </span>
+
+                </a>
+
+
+
+                <a href="#" class="quick-card">
+
+                    <div class="quick-icon">
+                        02
+                    </div>
+
+                    <h3>
+                        Cultural Club
+                    </h3>
+
+                    <p>
+                        Celebrate creativity and culture through
+                        music, dance, drama, art, and performances.
+                    </p>
+
+                    <span class="card-link">
+                        Explore Club →
+                    </span>
+
+                </a>
+
+
+
+                <a href="#" class="quick-card">
+
+                    <div class="quick-icon">
+                        03
+                    </div>
+
+                    <h3>
+                        Photography Club
+                    </h3>
+
+                    <p>
+                        Learn photography, participate in
+                        photo walks, and showcase your creativity.
+                    </p>
+
+                    <span class="card-link">
+                        Explore Club →
+                    </span>
+
+                </a>
+
+
+
+                <a href="#" class="quick-card">
+
+                    <div class="quick-icon">
+                        04
+                    </div>
+
+                    <h3>
+                        Sports Club
+                    </h3>
+
+                    <p>
+                        Stay active, participate in sports,
+                        and represent your campus in competitions.
+                    </p>
+
+                    <span class="card-link">
+                        Explore Club →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             JOIN A COMMUNITY
+        ========================== -->
+
+        <section class="services-section">
+
+
+            <div class="section-heading center-heading">
+
+                <p class="section-label">
+                    GET INVOLVED
+                </p>
+
+                <h2>
+                    Be a part of campus life
+                </h2>
+
+                <p>
+                    Joining a student club is a great way to
+                    develop skills, meet new people, and create
+                    memorable experiences.
+                </p>
+
+            </div>
+
+
+            <div class="service-links">
+
+
+                <a href="Events.html">
+
+                    <strong>
+                        Upcoming Events
+                    </strong>
+
+                    <span>
+                        Discover events happening on campus →
+                    </span>
+
+                </a>
+
+
+                <a href="Register.html">
+
+                    <strong>
+                        Join StudentHub
+                    </strong>
+
+                    <span>
+                        Create your student account →
+                    </span>
+
+                </a>
+
+
+                <a href="Contact.html">
+
+                    <strong>
+                        Contact Club Coordinators
+                    </strong>
+
+                    <span>
+                        Get in touch with the student community →
+                    </span>
+
+                </a>
+
+
+                <a href="Feedback.html">
+
+                    <strong>
+                        Share Your Ideas
+                    </strong>
+
+                    <span>
+                        Suggest a new club or activity →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="main-footer">
+
+        <div class="footer-content">
+
+
+            <div>
+
+                <a href="Home.html" class="footer-brand">
+                    Student<span>Hub</span>
+                </a>
+
+                <p>
+                    A centralized platform for students to
+                    manage academics, campus life, and resources.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <a href="Dashboard.html">Dashboard</a>
+
+                <a href="Events.html">Events</a>
+
+                <a href="Clubs.html">Clubs</a>
+
+                <a href="Contact.html">Contact</a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>StudentHub</h3>
+
+                <a href="About.html">About Us</a>
+
+                <a href="FAQ.html">FAQ</a>
+
+                <a href="Feedback.html">Feedback</a>
+
+                <a href="Login.html">Login</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 StudentHub. All rights reserved.
+            </p>
+
+            <p>
+                Student Portal
+            </p>
+
+        </div>
+
+    </footer>
+
 
 </body>
+
 </html>
