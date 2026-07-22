@@ -1,70 +1,573 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Location - StudentHub</title>
-    <!-- Linking to your unified stylesheet -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Advanced Extension: Accessibility Skip Link [1-4] -->
-    <a href="#main" class="skip-link">Skip to content</a>
 
-    <header>
-        <h1>StudentHub Portal</h1>
-        <nav aria-label="Main Navigation">
-            <!-- Full navigation for all 12 project pages [1, 5] -->
-            <ul>
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Location.html">Location</a></li>
-                <li><a href="Dashboard.html">Dashboard</a></li>
-                <li><a href="Events.html">Events</a></li>
-                <li><a href="Profile.html">Profile</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-                <li><a href="Admin.html">Admin</a></li>
-                <li><a href="FAQ.html">FAQ</a></li>
-                <li><a href="Feedback.html">Feedback</a></li>
-                <li><a href="Login.html">Login</a></li>
-                <li><a href="Register.html">Register</a></li>
-            </ul>
-        </nav>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Location | StudentHub</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         ACCESSIBILITY
+    ========================== -->
+
+    <a
+        href="#main"
+        class="skip-link"
+    >
+        Skip to content
+    </a>
+
+
+    <!-- =========================
+         HEADER / NAVIGATION
+    ========================== -->
+
+    <header class="main-header">
+
+        <div class="navbar">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="Home.html"
+                class="brand"
+            >
+                Student<span>Hub</span>
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav
+                class="main-nav"
+                aria-label="Main Navigation"
+            >
+
+                <a href="Home.html">
+                    Home
+                </a>
+
+                <a href="Dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="Attendance.html">
+                    Attendance
+                </a>
+
+                <a href="Timetable.html">
+                    Timetable
+                </a>
+
+                <a href="Assignments.html">
+                    Assignments
+                </a>
+
+                <a href="StudyMaterials.html">
+                    Study Materials
+                </a>
+
+                <a href="Announcements.html">
+                    Announcements
+                </a>
+
+                <a href="Events.html">
+                    Events
+                </a>
+
+                <a href="Clubs.html">
+                    Clubs
+                </a>
+
+                <a href="CampusServices.html">
+                    Campus Services
+                </a>
+
+                <a href="Notifications.html">
+                    Notifications
+                </a>
+
+                <a href="Profile.html">
+                    Profile
+                </a>
+
+                <a href="About.html">
+                    About
+                </a>
+
+                <a href="Contact.html">
+                    Contact
+                </a>
+
+                <a href="FAQ.html">
+                    FAQ
+                </a>
+
+                <a href="Feedback.html">
+                    Feedback
+                </a>
+
+            </nav>
+
+
+            <!-- LOGIN / REGISTER -->
+
+            <div class="nav-buttons">
+
+                <a
+                    href="Login.html"
+                    class="login-btn"
+                >
+                    Login
+                </a>
+
+                <a
+                    href="Register.html"
+                    class="register-btn"
+                >
+                    Register
+                </a>
+
+            </div>
+
+        </div>
+
     </header>
 
-    <!-- Intermediate Extension: Breadcrumb Navigation [1, 6, 7] -->
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="Home.html" style="color: inherit; text-decoration: none;">Home</a> / Location
-    </nav>
+
+
+    <!-- =========================
+         BREADCRUMB
+    ========================== -->
+
+    <div class="breadcrumb-container">
+
+        <div class="breadcrumb">
+
+            <a href="Home.html">
+                Home
+            </a>
+
+            <span>/</span>
+
+            <span>
+                Location
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
 
     <main id="main">
-        <section>
-            <h2>Our Campus Location</h2>
-            <p>Find us at the heart of the educational district. Use the interactive map below to get directions to the main gate.</p>
-            
-            <!-- Animated Map Container [8] -->
-            <div class="map-container">
-                <!-- Use the Embed URL below to prevent "Refused to Connect" errors -->
-                <!-- Note: This embed link is not from your sources and was generated to fix the error -->
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.334032168936!2d72.82146!3d22.597797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e5100385a4387%3A0x809a8dee1ce7d96e!2sCharusat%20Campus%20Main%20Gate%201!5e0!3m2!1sen!2sin!4v1721143200000!5m2!1sen!2sin" 
-                    title="Charusat Campus Main Gate Map"
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
+
+
+        <!-- =========================
+             LOCATION HERO
+        ========================== -->
+
+        <section class="location-hero">
+
+            <div class="location-hero-content">
+
+                <p class="section-label">
+                    CAMPUS LOCATION
+                </p>
+
+                <h1>
+                    Find Your Way
+                    <span>Around Campus.</span>
+                </h1>
+
+                <p>
+                    Explore the campus location, find important
+                    facilities, and get directions to the main gate
+                    using the map below.
+                </p>
+
             </div>
 
-            <!-- Stylized Info Box [8] -->
-            <div class="location-info">
-                <h3>Address Details</h3>
-                <p><strong>Main Gate 1:</strong> Charusat Campus, Changa, Gujarat.</p>
-                <p><strong>Operating Hours:</strong> 8:00 AM - 6:00 PM</p>
-            </div>
         </section>
+
+
+
+        <!-- =========================
+             MAP SECTION
+        ========================== -->
+
+        <section class="home-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        CAMPUS MAP
+                    </p>
+
+                    <h2>
+                        Charusat Campus Location
+                    </h2>
+
+                </div>
+
+                <p>
+                    Use the interactive map to locate the campus
+                    and plan your visit.
+                </p>
+
+            </div>
+
+
+            <!-- MAP CARD -->
+
+            <div class="location-map-card">
+
+                <div class="map-container">
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.334032168936!2d72.82146!3d22.597797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e5100385a4387%3A0x809a8dee1ce7d96e!2sCharusat%20Campus%20Main%20Gate%201!5e0!3m2!1sen!2sin!4v1721143200000!5m2!1sen!2sin"
+                        title="Charusat Campus Main Gate Map"
+                        allowfullscreen
+                        loading="lazy"
+                    >
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             LOCATION DETAILS
+        ========================== -->
+
+        <section class="services-section">
+
+            <div class="center-heading">
+
+                <p class="section-label">
+                    CAMPUS INFORMATION
+                </p>
+
+                <h2>
+                    Campus Details
+                </h2>
+
+                <p>
+                    Important information to help you reach
+                    and navigate the StudentHub campus.
+                </p>
+
+            </div>
+
+
+            <div class="location-details-grid">
+
+
+                <!-- ADDRESS -->
+
+                <div class="location-detail-card">
+
+                    <div class="location-icon">
+                        01
+                    </div>
+
+                    <h3>
+                        Campus Address
+                    </h3>
+
+                    <p>
+                        Charusat Campus,
+                        Changa, Gujarat, India.
+                    </p>
+
+                </div>
+
+
+
+                <!-- MAIN GATE -->
+
+                <div class="location-detail-card">
+
+                    <div class="location-icon">
+                        02
+                    </div>
+
+                    <h3>
+                        Main Entrance
+                    </h3>
+
+                    <p>
+                        Main Gate 1 is the primary entrance
+                        for students and visitors.
+                    </p>
+
+                </div>
+
+
+
+                <!-- HOURS -->
+
+                <div class="location-detail-card">
+
+                    <div class="location-icon">
+                        03
+                    </div>
+
+                    <h3>
+                        Campus Hours
+                    </h3>
+
+                    <p>
+                        Open daily from
+                        8:00 AM to 6:00 PM.
+                    </p>
+
+                </div>
+
+
+
+                <!-- DIRECTIONS -->
+
+                <div class="location-detail-card">
+
+                    <div class="location-icon">
+                        04
+                    </div>
+
+                    <h3>
+                        Need Directions?
+                    </h3>
+
+                    <p>
+                        Use the interactive map above
+                        to find the best route to campus.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             QUICK NAVIGATION
+        ========================== -->
+
+        <section class="home-section">
+
+            <div class="center-heading">
+
+                <p class="section-label">
+                    EXPLORE STUDENTHUB
+                </p>
+
+                <h2>
+                    Explore More
+                </h2>
+
+                <p>
+                    Discover campus events, services,
+                    and student communities.
+                </p>
+
+            </div>
+
+
+            <div class="service-links">
+
+                <a href="Events.html">
+
+                    <strong>
+                        Campus Events
+                    </strong>
+
+                    <span>
+                        Discover upcoming events →
+                    </span>
+
+                </a>
+
+
+                <a href="Clubs.html">
+
+                    <strong>
+                        Clubs & Communities
+                    </strong>
+
+                    <span>
+                        Find student clubs →
+                    </span>
+
+                </a>
+
+
+                <a href="CampusServices.html">
+
+                    <strong>
+                        Campus Services
+                    </strong>
+
+                    <span>
+                        Explore campus resources →
+                    </span>
+
+                </a>
+
+
+                <a href="Contact.html">
+
+                    <strong>
+                        Contact Us
+                    </strong>
+
+                    <span>
+                        Get in touch with us →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2026 StudentHub Inc. | Developed with Accessible HTML5 Structure</p>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="main-footer">
+
+        <div class="footer-content">
+
+
+            <!-- FOOTER BRAND -->
+
+            <div>
+
+                <a
+                    href="Home.html"
+                    class="footer-brand"
+                >
+                    Student<span>Hub</span>
+                </a>
+
+                <p>
+                    A centralized platform for students to
+                    manage academics, campus life, and resources.
+                </p>
+
+            </div>
+
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-links">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="Dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="Announcements.html">
+                    Announcements
+                </a>
+
+                <a href="Events.html">
+                    Events
+                </a>
+
+                <a href="Contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+
+            <!-- STUDENTHUB -->
+
+            <div class="footer-links">
+
+                <h3>
+                    StudentHub
+                </h3>
+
+                <a href="About.html">
+                    About Us
+                </a>
+
+                <a href="FAQ.html">
+                    FAQ
+                </a>
+
+                <a href="Feedback.html">
+                    Feedback
+                </a>
+
+                <a href="Login.html">
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 StudentHub. All rights reserved.
+            </p>
+
+            <p>
+                Student Portal
+            </p>
+
+        </div>
+
     </footer>
+
+
 </body>
+
 </html>
