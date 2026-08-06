@@ -374,16 +374,18 @@
         </div>
     </footer>
 
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const mainNav = document.getElementById('mainNav');
+   <script>
+const hamburger=document.getElementById("hamburger");
+const nav=document.querySelector(".main-nav");
 
-        hamburger.addEventListener('click', () => {
-            const isOpen = mainNav.classList.toggle('open');
-            hamburger.classList.toggle('active', isOpen);
-            hamburger.setAttribute('aria-expanded', isOpen);
-        });
-    </script>
+hamburger.addEventListener("click",function(){
+
+    nav.classList.toggle("open");
+
+    hamburger.classList.toggle("active");
+
+});
+</script>
 
 </body>
 
