@@ -4,655 +4,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Dashboard | StudentHub</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- =========================
-         ACCESSIBILITY
-    ========================== -->
+    <a href="#main" class="skip-link">Skip to content</a>
 
-    <a href="#main" class="skip-link">
-        Skip to content
-    </a>
-
-
-    <!-- =========================
-         HEADER / NAVIGATION
-    ========================== -->
-
+    <!-- Header -->
     <header class="main-header">
-
         <div class="navbar">
-
-            <a href="Home.html" class="brand">
-                Student<span>Hub</span>
-            </a>
+            <a href="Home.html" class="brand">Student<span>Hub</span></a>
 
             <nav class="main-nav" aria-label="Main Navigation">
-
                 <a href="Home.html">Home</a>
-
-                <a href="Dashboard.html" class="active">
-                    Dashboard
-                </a>
-
-                <a href="Attendance.html">
-                    Attendance
-                </a>
-
-                <a href="Timetable.html">
-                    Timetable
-                </a>
-
-                <a href="Assignments.html">
-                    Assignments
-                </a>
-
-                <a href="StudyMaterials.html">
-                    Study Materials
-                </a>
-
-                <a href="Announcements.html">
-                    Announcements
-                </a>
-
-                <a href="Events.html">
-                    Events
-                </a>
-
-                <a href="Clubs.html">
-                    Clubs
-                </a>
-
-                <a href="CampusServices.html">
-                    Campus Services
-                </a>
-
-                <a href="Notifications.html">
-                    Notifications
-                </a>
-
-                <a href="Profile.html">
-                    Profile
-                </a>
-
-                <a href="About.html">
-                    About
-                </a>
-
-                <a href="Contact.html">
-                    Contact
-                </a>
-
-                <a href="FAQ.html">
-                    FAQ
-                </a>
-
-                <a href="Feedback.html">
-                    Feedback
-                </a>
-
+                <a href="Dashboard.html" class="active" aria-current="page">Dashboard</a>
+                <a href="Attendance.html">Attendance</a>
+                <a href="Timetable.html">Timetable</a>
+                <a href="Assignments.html">Assignments</a>
+                <a href="Events.html">Events</a>
+                <a href="Notifications.html">Notifications</a>
+                <a href="Profile.html">Profile</a>
             </nav>
 
             <div class="nav-buttons">
-
-                <a href="Login.html" class="login-btn">
-                    Login
-                </a>
-
-                <a href="Register.html" class="register-btn">
-                    Register
-                </a>
-
+                <a href="Login.html" class="login-btn">Login</a>
+                <a href="Register.html" class="register-btn">Register</a>
             </div>
-
         </div>
-
     </header>
 
-
-    <!-- =========================
-         BREADCRUMB
-    ========================== -->
-
-    <div class="breadcrumb-container">
-
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb-container" aria-label="Breadcrumb">
         <div class="breadcrumb">
-
-            <a href="Home.html">
-                Home
-            </a>
-
-            <span>/</span>
-
-            <span>
-                Dashboard
-            </span>
-
+            <a href="Home.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Dashboard</span>
         </div>
-
-    </div>
-
-
-    <!-- =========================
-         MAIN CONTENT
-    ========================== -->
+    </nav>
 
     <main id="main">
 
-        <!-- DASHBOARD INTRO -->
-
+        <!-- Welcome -->
         <section class="location-hero">
-
             <div class="location-hero-content">
-
-                <p class="section-label">
-                    STUDENT DASHBOARD
-                </p>
-
-                <h1>
-                    Welcome back,
-                    <span>Student!</span>
-                </h1>
-
-                <p>
-                    Stay organized and keep track of your academic
-                    progress, upcoming tasks, campus activities,
-                    and important updates from one place.
-                </p>
-
+                <p class="section-label">Student Dashboard</p>
+                <h1>Welcome back, <span>Student!</span></h1>
+                <p>Track your academics, tasks, and campus updates in one place.</p>
             </div>
-
         </section>
 
-
-        <!-- OVERVIEW -->
-
+        <!-- Overview Cards -->
         <section class="home-section">
-
             <div class="section-heading">
-
                 <div>
-
-                    <p class="section-label">
-                        AT A GLANCE
-                    </p>
-
-                    <h2>
-                        Your Academic Overview
-                    </h2>
-
+                    <p class="section-label">At a Glance</p>
+                    <h2>Your Academic Overview</h2>
                 </div>
-
-                <p>
-                    A quick summary of your current academic
-                    performance and student activities.
-                </p>
-
             </div>
-
 
             <div class="quick-access-grid">
+                <article class="quick-card">
+                    <div class="quick-icon" aria-hidden="true">01</div>
+                    <h3>Attendance</h3>
+                    <p>Overall attendance: 85%</p>
+                    <a href="Attendance.html" class="card-link">View Attendance →</a>
+                </article>
 
-                <div class="quick-card">
+                <article class="quick-card">
+                    <div class="quick-icon" aria-hidden="true">02</div>
+                    <h3>Pending Assignments</h3>
+                    <p>4 assignments need attention</p>
+                    <a href="Assignments.html" class="card-link">View Assignments →</a>
+                </article>
 
-                    <div class="quick-icon">
-                        01
-                    </div>
+                <article class="quick-card">
+                    <div class="quick-icon" aria-hidden="true">03</div>
+                    <h3>Upcoming Events</h3>
+                    <p>3 events this month</p>
+                    <a href="Events.html" class="card-link">Explore Events →</a>
+                </article>
 
-                    <h3>
-                        Attendance
-                    </h3>
-
-                    <p>
-                        Your overall attendance is currently
-                        85%. Keep attending your classes regularly.
-                    </p>
-
-                    <span class="card-link">
-                        View Attendance →
-                    </span>
-
-                </div>
-
-
-                <div class="quick-card">
-
-                    <div class="quick-icon">
-                        02
-                    </div>
-
-                    <h3>
-                        Pending Assignments
-                    </h3>
-
-                    <p>
-                        You currently have 4 assignments that
-                        require your attention.
-                    </p>
-
-                    <span class="card-link">
-                        View Assignments →
-                    </span>
-
-                </div>
-
-
-                <div class="quick-card">
-
-                    <div class="quick-icon">
-                        03
-                    </div>
-
-                    <h3>
-                        Upcoming Events
-                    </h3>
-
-                    <p>
-                        There are 3 upcoming campus events
-                        scheduled for this month.
-                    </p>
-
-                    <span class="card-link">
-                        Explore Events →
-                    </span>
-
-                </div>
-
-
-                <div class="quick-card">
-
-                    <div class="quick-icon">
-                        04
-                    </div>
-
-                    <h3>
-                        Notifications
-                    </h3>
-
-                    <p>
-                        Check your latest academic and
-                        campus notifications.
-                    </p>
-
-                    <span class="card-link">
-                        View Updates →
-                    </span>
-
-                </div>
-
+                <article class="quick-card">
+                    <div class="quick-icon" aria-hidden="true">04</div>
+                    <h3>Notifications</h3>
+                    <p>Latest academic & campus updates</p>
+                    <a href="Notifications.html" class="card-link">View Updates →</a>
+                </article>
             </div>
-
         </section>
 
-
-        <!-- TODAY'S SCHEDULE AND TASKS -->
-
+        <!-- Schedule + Activity -->
         <section class="home-section">
-
             <div class="content-grid">
 
-
-                <!-- TODAY'S SCHEDULE -->
-
+                <!-- Today's Schedule -->
                 <div class="home-panel">
-
                     <div class="panel-header">
-
                         <div>
-
-                            <p class="section-label">
-                                TODAY
-                            </p>
-
-                            <h2>
-                                Today's Schedule
-                            </h2>
-
+                            <p class="section-label">Today</p>
+                            <h2>Today's Schedule</h2>
                         </div>
-
-                        <a href="Timetable.html">
-                            Full Timetable
-                        </a>
-
+                        <a href="Timetable.html">Full Timetable</a>
                     </div>
-
 
                     <div class="event-item">
-
-                        <div class="event-number">
-                            09
-                        </div>
-
+                        <div class="event-number" aria-hidden="true">09</div>
                         <div>
-
-                            <h3>
-                                Computer Networks
-                            </h3>
-
-                            <p>
-                                09:00 AM – 10:00 AM · Room A-204
-                            </p>
-
+                            <h3>Computer Networks</h3>
+                            <p>09:00 AM – 10:00 AM · Room A-204</p>
                         </div>
-
                     </div>
-
 
                     <div class="event-item">
-
-                        <div class="event-number">
-                            11
-                        </div>
-
+                        <div class="event-number" aria-hidden="true">11</div>
                         <div>
-
-                            <h3>
-                                Engineering Mathematics
-                            </h3>
-
-                            <p>
-                                11:00 AM – 12:00 PM · Room B-102
-                            </p>
-
+                            <h3>Engineering Mathematics</h3>
+                            <p>11:00 AM – 12:00 PM · Room B-102</p>
                         </div>
-
                     </div>
-
 
                     <div class="event-item">
-
-                        <div class="event-number">
-                            02
-                        </div>
-
+                        <div class="event-number" aria-hidden="true">02</div>
                         <div>
-
-                            <h3>
-                                Object Oriented Programming
-                            </h3>
-
-                            <p>
-                                02:00 PM – 03:00 PM · Lab 3
-                            </p>
-
+                            <h3>Object Oriented Programming</h3>
+                            <p>02:00 PM – 03:00 PM · Lab 3</p>
                         </div>
-
                     </div>
-
                 </div>
 
-
-                <!-- RECENT UPDATES -->
-
+                <!-- Recent Activity -->
                 <div class="home-panel">
-
                     <div class="panel-header">
-
                         <div>
-
-                            <p class="section-label">
-                                UPDATES
-                            </p>
-
-                            <h2>
-                                Recent Activity
-                            </h2>
-
+                            <p class="section-label">Updates</p>
+                            <h2>Recent Activity</h2>
                         </div>
-
-                        <a href="Notifications.html">
-                            View All
-                        </a>
-
+                        <a href="Notifications.html">View All</a>
                     </div>
 
-
                     <div class="announcement-item">
-
                         <div class="announcement-date">
                             <strong>20</strong>
                             <span>JUL</span>
                         </div>
-
                         <div>
-
-                            <h3>
-                                Examination Schedule Released
-                            </h3>
-
-                            <p>
-                                Check the latest examination schedule
-                                for upcoming assessments.
-                            </p>
-
+                            <h3>Examination Schedule Released</h3>
+                            <p>Check the latest exam timetable.</p>
                         </div>
-
                     </div>
 
-
                     <div class="announcement-item">
-
                         <div class="announcement-date">
                             <strong>18</strong>
                             <span>JUL</span>
                         </div>
-
                         <div>
-
-                            <h3>
-                                Assignment Reminder
-                            </h3>
-
-                            <p>
-                                Computer Networks assignment submission
-                                deadline is approaching.
-                            </p>
-
+                            <h3>Assignment Reminder</h3>
+                            <p>Computer Networks deadline approaching.</p>
                         </div>
-
                     </div>
 
-
                     <div class="announcement-item">
-
                         <div class="announcement-date">
                             <strong>15</strong>
                             <span>JUL</span>
                         </div>
-
                         <div>
-
-                            <h3>
-                                Technical Fest Registration
-                            </h3>
-
-                            <p>
-                                Registration is now open for the annual
-                                student technical festival.
-                            </p>
-
+                            <h3>Technical Fest Registration</h3>
+                            <p>Registration is now open.</p>
                         </div>
-
                     </div>
-
                 </div>
 
             </div>
-
         </section>
 
-
-        <!-- QUICK ACTIONS -->
-
+        <!-- Quick Actions -->
         <section class="services-section">
-
             <div class="center-heading">
-
-                <p class="section-label">
-                    QUICK ACTIONS
-                </p>
-
-                <h2>
-                    Manage Your Student Life
-                </h2>
-
-                <p>
-                    Access important academic tools and student
-                    resources quickly.
-                </p>
-
+                <p class="section-label">Quick Actions</p>
+                <h2>Manage Your Student Life</h2>
             </div>
-
 
             <div class="service-links">
-
                 <a href="Attendance.html">
-
-                    <strong>
-                        Check Attendance
-                    </strong>
-
-                    <span>
-                        Review your attendance →
-                    </span>
-
+                    <strong>Check Attendance</strong>
+                    <span>Review your attendance →</span>
                 </a>
-
-
                 <a href="Assignments.html">
-
-                    <strong>
-                        View Assignments
-                    </strong>
-
-                    <span>
-                        Check pending work →
-                    </span>
-
+                    <strong>View Assignments</strong>
+                    <span>Check pending work →</span>
                 </a>
-
-
                 <a href="StudyMaterials.html">
-
-                    <strong>
-                        Study Materials
-                    </strong>
-
-                    <span>
-                        Access learning resources →
-                    </span>
-
+                    <strong>Study Materials</strong>
+                    <span>Access resources →</span>
                 </a>
-
-
                 <a href="Events.html">
-
-                    <strong>
-                        Campus Events
-                    </strong>
-
-                    <span>
-                        Explore upcoming events →
-                    </span>
-
+                    <strong>Campus Events</strong>
+                    <span>Explore events →</span>
                 </a>
-
             </div>
-
         </section>
 
     </main>
 
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
+    <!-- Footer -->
     <footer class="main-footer">
-
         <div class="footer-content">
-
             <div>
-
-                <a href="Home.html" class="footer-brand">
-                    Student<span>Hub</span>
-                </a>
-
-                <p>
-                    A centralized platform for students to
-                    manage academics, campus life, and resources.
-                </p>
-
+                <a href="Home.html" class="footer-brand">Student<span>Hub</span></a>
+                <p>Your central hub for academics and campus life.</p>
             </div>
 
             <div class="footer-links">
-
-                <h3>
-                    Quick Links
-                </h3>
-
-                <a href="Home.html">
-                    Home
-                </a>
-
-                <a href="Attendance.html">
-                    Attendance
-                </a>
-
-                <a href="Assignments.html">
-                    Assignments
-                </a>
-
-                <a href="Events.html">
-                    Events
-                </a>
-
+                <h3>Quick Links</h3>
+                <a href="Home.html">Home</a>
+                <a href="Attendance.html">Attendance</a>
+                <a href="Assignments.html">Assignments</a>
+                <a href="Events.html">Events</a>
             </div>
 
             <div class="footer-links">
-
-                <h3>
-                    StudentHub
-                </h3>
-
-                <a href="About.html">
-                    About Us
-                </a>
-
-                <a href="FAQ.html">
-                    FAQ
-                </a>
-
-                <a href="Feedback.html">
-                    Feedback
-                </a>
-
-                <a href="Contact.html">
-                    Contact
-                </a>
-
+                <h3>Support</h3>
+                <a href="About.html">About</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="Contact.html">Contact</a>
             </div>
-
         </div>
 
         <div class="footer-bottom">
-
-            <p>
-                © 2026 StudentHub. All rights reserved.
-            </p>
-
-            <p>
-                Student Portal
-            </p>
-
+            <p>© 2026 StudentHub. All rights reserved.</p>
         </div>
-
     </footer>
 
 </body>
