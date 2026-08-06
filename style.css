@@ -70,6 +70,8 @@ button {
     align-items: center;
 
     gap: 40px;
+     position:relative;
+
 
 }
 
@@ -102,16 +104,22 @@ button {
 
 
 
-.main-nav {
+.main-nav{
+    display:none;
+    position:absolute;
+    top:76px;
+    left:0;
+    width:100%;
+    background:#fff;
+    flex-direction:column;
+    padding:20px;
+    border-top:1px solid #e5e7eb;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    z-index:9999;
+}
 
-    display: flex;
-
-    align-items: center;
-
-    gap: 4px;
-
-    flex: 1;
-
+.main-nav.open{
+    display:flex;
 }
 
 
@@ -1362,7 +1370,13 @@ main {
     }
 
 }
+@media (max-width:1000px){
 
+    .nav-buttons{
+        display:none;
+    }
+
+}
 
 @media (max-width:1000px){
 
