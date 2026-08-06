@@ -6,6 +6,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | StudentHub</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* ===== Responsive additions (can move to style.css) ===== */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            position: relative;
+        }
+
+        .main-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.25rem;
+            align-items: center;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 22px;
+            height: 2.5px;
+            background: #222;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(7.5px) rotate(45deg);
+        }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-7.5px) rotate(-45deg);
+        }
+
+        /* Overview cards - Grid */
+        .quick-access-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+        }
+
+        /* Schedule + Activity - Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        /* Quick actions - Flex/Grid */
+        .service-links {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        /* Footer */
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 2rem;
+        }
+
+        /* ===== Mobile ===== */
+        @media (max-width: 900px) {
+            .hamburger { display: flex; }
+
+            .main-nav {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem 0;
+                gap: 0.75rem;
+            }
+
+            .main-nav.open { display: flex; }
+
+            .quick-access-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-links {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .quick-access-grid,
+            .service-links {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-buttons .login-btn,
+            .nav-buttons .register-btn {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -17,7 +147,13 @@
         <div class="navbar">
             <a href="Home.html" class="brand">Student<span>Hub</span></a>
 
-            <nav class="main-nav" aria-label="Main Navigation">
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
                 <a href="Home.html">Home</a>
                 <a href="Dashboard.html" class="active" aria-current="page">Dashboard</a>
                 <a href="Attendance.html">Attendance</a>
@@ -100,7 +236,6 @@
         <section class="home-section">
             <div class="content-grid">
 
-                <!-- Today's Schedule -->
                 <div class="home-panel">
                     <div class="panel-header">
                         <div>
@@ -135,7 +270,6 @@
                     </div>
                 </div>
 
-                <!-- Recent Activity -->
                 <div class="home-panel">
                     <div class="panel-header">
                         <div>
@@ -239,6 +373,17 @@
             <p>© 2026 StudentHub. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mainNav = document.getElementById('mainNav');
+
+        hamburger.addEventListener('click', () => {
+            const isOpen = mainNav.classList.toggle('open');
+            hamburger.classList.toggle('active', isOpen);
+            hamburger.setAttribute('aria-expanded', isOpen);
+        });
+    </script>
 
 </body>
 
