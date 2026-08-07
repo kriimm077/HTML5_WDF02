@@ -1311,3 +1311,147 @@ main {
         gap: 10px;
     }
 }
+/* ============================= */
+/*       DARK / LIGHT MODE       */
+/* ============================= */
+
+/* Smooth transition */
+body,
+.navbar,
+.card,
+.dropdown-menu,
+.breadcrumb,
+.form-control,
+.btn-outline-secondary {
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease;
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #121212 !important;
+    color: #f1f1f1 !important;
+}
+
+/* Navbar */
+body.dark-mode .navbar {
+    background-color: #1e1e1e !important;
+    border-color: #333 !important;
+}
+
+body.dark-mode .navbar-brand {
+    color: #ffffff !important;
+}
+
+body.dark-mode .nav-link {
+    color: #dddddd !important;
+}
+
+body.dark-mode .nav-link:hover,
+body.dark-mode .nav-link.active {
+    color: #6ea8fe !important;
+}
+
+/* Dropdown */
+body.dark-mode .dropdown-menu {
+    background-color: #242424 !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode .dropdown-item {
+    color: #eeeeee !important;
+}
+
+body.dark-mode .dropdown-item:hover {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+}
+
+/* Cards */
+body.dark-mode .card {
+    background-color: #1e1e1e !important;
+    color: #f1f1f1 !important;
+    border-color: #333 !important;
+}
+
+body.dark-mode .card-title,
+body.dark-mode .card h5,
+body.dark-mode .card h6,
+body.dark-mode .card strong {
+    color: #ffffff !important;
+}
+
+/* Muted text */
+body.dark-mode .text-muted {
+    color: #aaaaaa !important;
+}
+
+/* Text-dark Bootstrap class */
+body.dark-mode .text-dark {
+    color: #f1f1f1 !important;
+}
+
+/* Breadcrumb */
+body.dark-mode .breadcrumb {
+    background-color: transparent;
+}
+
+body.dark-mode .breadcrumb-item {
+    color: #bbbbbb;
+}
+
+body.dark-mode .breadcrumb-item.active {
+    color: #eeeeee;
+}
+
+/* Links */
+body.dark-mode a {
+    color: #6ea8fe;
+}
+
+/* Keep Bootstrap primary buttons looking normal */
+body.dark-mode .btn-primary {
+    color: #fff !important;
+}
+
+/* Outline secondary button */
+body.dark-mode .btn-outline-secondary {
+    color: #ddd !important;
+    border-color: #777 !important;
+}
+
+body.dark-mode .btn-outline-secondary:hover {
+    background-color: #444 !important;
+    color: #fff !important;
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+    border: 1px solid #ced4da;
+    background: transparent;
+    color: #212529;
+    border-radius: 50px;
+    padding: 0.35rem 0.75rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #f1f1f1;
+}
+
+body.dark-mode .dark-mode-toggle {
+    border-color: #666;
+    color: #ffffff;
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+    background-color: #333;
+}
+
+/* Footer */
+body.dark-mode footer {
+    background-color: #0b0b0b !important;
+}
