@@ -1,20 +1,467 @@
-<main id="main" style="max-width: 600px;">
-    <section>
-        <h2>Student Registration</h2>
-        <form>
-            <div>
-                <label for="fname">First Name:</label>
-                <input type="text" id="fname" required>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | StudentHub</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ===== Register page layout ===== */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            position: relative;
+        }
+
+        .main-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.25rem;
+            align-items: center;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 22px;
+            height: 2.5px;
+            background: #222;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(7.5px) rotate(45deg);
+        }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-7.5px) rotate(-45deg);
+        }
+
+        /* Register form card */
+        .register-section {
+            display: flex;
+            justify-content: center;
+            padding: 2.5rem 1.25rem 4rem;
+        }
+
+        .register-card {
+            width: 100%;
+            max-width: 440px;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            padding: 2rem 2rem 2.25rem;
+        }
+
+        .register-card h1 {
+            font-size: 1.6rem;
+            margin: 0 0 0.35rem;
+        }
+
+        .register-card .subtitle {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.15rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.7rem 0.9rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: border-color 0.2s;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #1a73e8;
+            box-shadow: 0 0 0 3px rgba(26,115,232,0.15);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .register-btn-submit {
+            width: 100%;
+            padding: 0.8rem;
+            margin-top: 0.5rem;
+            background: #1a73e8;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .register-btn-submit:hover {
+            background: #1557b0;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 1.25rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .form-footer a {
+            color: #1a73e8;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer grid */
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 2rem;
+        }
+
+
+        /* ===== Registration Success Modal ===== */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            background: #fff;
+            border-radius: 14px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+            animation: modalPop 0.25s ease;
+        }
+
+        .modal-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-content h2 {
+            margin: 0 0 0.5rem;
+        }
+
+        .modal-content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 14px;
+            border: none;
+            background: none;
+            font-size: 1.7rem;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .modal-ok {
+            border: none;
+            background: #1a73e8;
+            color: #fff;
+            padding: 0.7rem 2rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .modal-ok:hover {
+            background: #1557b0;
+        }
+
+        @keyframes modalPop {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* ===== Mobile ===== */
+        @media (max-width: 900px) {
+            .hamburger { display: flex; }
+
+            .main-nav {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem 0;
+                gap: 0.75rem;
+            }
+
+            .main-nav.open { display: flex; }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .register-card {
+                padding: 1.5rem 1.25rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="navbar">
+            <a href="Home.html" class="brand">Student<span>Hub</span></a>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+                <a href="Home.html">Home</a>
+                <a href="Dashboard.html">Dashboard</a>
+                <a href="Attendance.html">Attendance</a>
+                <a href="Timetable.html">Timetable</a>
+                <a href="Assignments.html">Assignments</a>
+                <a href="Events.html">Events</a>
+                <a href="Notifications.html">Notifications</a>
+                <a href="Profile.html">Profile</a>
+                <a href="FAQ.html">FAQ</a>
+            </nav>
+
+            <div class="nav-buttons">
+                <a href="Login.html" class="login-btn">Login</a>
+                <a href="Register.html" class="register-btn active">Register</a>
             </div>
-            <div>
-                <label for="email">Student Email:</label>
-                <input type="email" id="email" required>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb-container" aria-label="Breadcrumb">
+        <div class="breadcrumb">
+            <a href="Home.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Register</span>
+        </div>
+    </nav>
+
+    <main id="main">
+
+        <section class="register-section">
+            <div class="register-card">
+                <h1>Create Account</h1>
+                <p class="subtitle">Join StudentHub and manage your campus life.</p>
+
+                <form id="registerForm" action="#" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="fname" placeholder="John" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="lname" placeholder="Doe" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Student Email</label>
+                        <input type="email" id="email" name="email" placeholder="john@university.edu" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="student-id">Student ID</label>
+                        <input type="text" id="student-id" name="student-id" placeholder="e.g. 2026CS001" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="new-pass">Password</label>
+                        <input type="password" id="new-pass" name="password" placeholder="Min. 8 characters" minlength="8" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-pass">Confirm Password</label>
+                        <input type="password" id="confirm-pass" name="confirm-password" placeholder="Re-enter password" minlength="8" required>
+                    </div>
+
+                    <button type="submit" class="register-btn-submit">Register Now</button>
+                </form>
+
+                <p class="form-footer">
+                    Already have an account? <a href="Login.html">Login</a>
+                </p>
             </div>
-            <div>
-                <label for="new-pass">Create Password:</label>
-                <input type="password" id="new-pass" required>
+        </section>
+
+    </main>
+
+
+        <!-- Registration Success Modal -->
+        <div class="modal" id="successModal" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+                <div class="modal-icon">✅</div>
+                <h2 id="successTitle">Registration Successful!</h2>
+                <p>Your StudentHub account has been created successfully.</p>
+                <button class="modal-ok" id="modalOk">OK</button>
             </div>
-            <button type="submit">Register Now</button>
-        </form>
-    </section>
-</main>
+        </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div>
+                <a href="Home.html" class="footer-brand">Student<span>Hub</span></a>
+                <p>Your central hub for academics and campus life.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="Home.html">Home</a>
+                <a href="Dashboard.html">Dashboard</a>
+                <a href="Events.html">Events</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Support</h3>
+                <a href="About.html">About</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="Contact.html">Contact</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 StudentHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mainNav = document.getElementById('mainNav');
+
+        hamburger.addEventListener('click', () => {
+            const isOpen = mainNav.classList.toggle('open');
+            hamburger.classList.toggle('active', isOpen);
+            hamburger.setAttribute('aria-expanded', isOpen);
+        });
+
+
+        const registerForm = document.getElementById('registerForm');
+        const successModal = document.getElementById('successModal');
+        const modalClose = document.getElementById('modalClose');
+        const modalOk = document.getElementById('modalOk');
+        const confirmPass = document.getElementById('confirm-pass');
+        const newPass = document.getElementById('new-pass');
+
+        registerForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            if (newPass.value !== confirmPass.value) {
+                confirmPass.setCustomValidity('Passwords do not match.');
+                confirmPass.reportValidity();
+                return;
+            }
+
+            confirmPass.setCustomValidity('');
+            successModal.classList.add('show');
+            modalOk.focus();
+        });
+
+        function closeModal() {
+            successModal.classList.remove('show');
+        }
+
+        modalClose.addEventListener('click', closeModal);
+        modalOk.addEventListener('click', closeModal);
+
+        successModal.addEventListener('click', (event) => {
+            if (event.target === successModal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && successModal.classList.contains('show')) {
+                closeModal();
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
