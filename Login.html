@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | StudentHub</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            position: relative;
+        }
+
+        .main-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.25rem;
+            align-items: center;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 22px;
+            height: 2.5px;
+            background: #222;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(7.5px) rotate(45deg);
+        }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-7.5px) rotate(-45deg);
+        }
+
+        .login-section {
+            display: flex;
+            justify-content: center;
+            padding: 2.5rem 1.25rem 4rem;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 420px;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            padding: 2rem 2rem 2.25rem;
+        }
+
+        .login-card h1 {
+            font-size: 1.6rem;
+            margin: 0 0 0.35rem;
+        }
+
+        .login-card .subtitle {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.15rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.7rem 0.9rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #1a73e8;
+            box-shadow: 0 0 0 3px rgba(26,115,232,0.15);
+        }
+
+        .form-group input.invalid {
+            border-color: #d93025;
+            box-shadow: 0 0 0 3px rgba(217,48,37,0.15);
+        }
+
+        .error-message {
+            display: none;
+            color: #d93025;
+            font-size: 0.8rem;
+            margin-top: 0.35rem;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .login-btn-submit {
+            width: 100%;
+            padding: 0.8rem;
+            margin-top: 0.5rem;
+            background: #1a73e8;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .login-btn-submit:hover {
+            background: #1557b0;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 1.25rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .form-footer a {
+            color: #1a73e8;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            background: #fff;
+            border-radius: 14px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 14px;
+            border: none;
+            background: none;
+            font-size: 1.7rem;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .modal-ok {
+            border: none;
+            background: #1a73e8;
+            color: #fff;
+            padding: 0.7rem 2rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        @media (max-width: 900px) {
+            .hamburger { display: flex; }
+
+            .main-nav {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem 0;
+                gap: 0.75rem;
+            }
+
+            .main-nav.open { display: flex; }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .login-card {
+                padding: 1.5rem 1.25rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <header class="main-header">
+        <div class="navbar">
+            <a href="Home.html" class="brand">Student<span>Hub</span></a>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+                <a href="Home.html">Home</a>
+                <a href="Dashboard.html">Dashboard</a>
+                <a href="Attendance.html">Attendance</a>
+                <a href="Timetable.html">Timetable</a>
+                <a href="Assignments.html">Assignments</a>
+                <a href="Events.html">Events</a>
+                <a href="Notifications.html">Notifications</a>
+                <a href="Profile.html">Profile</a>
+                <a href="FAQ.html">FAQ</a>
+            </nav>
+
+            <div class="nav-buttons">
+                <a href="Login.html" class="login-btn active">Login</a>
+                <a href="Register.html" class="register-btn">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="breadcrumb-container" aria-label="Breadcrumb">
+        <div class="breadcrumb">
+            <a href="Home.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Login</span>
+        </div>
+    </nav>
+
+    <main id="main">
+        <section class="login-section">
+            <div class="login-card">
+                <h1>Welcome Back</h1>
+                <p class="subtitle">Sign in to access your StudentHub dashboard.</p>
+
+                <form id="loginForm" action="#" method="POST" novalidate>
+                    <div class="form-group">
+                        <label for="login-email">Student Email / ID <span aria-hidden="true">*</span></label>
+                        <input type="text" id="login-email" name="login-email"
+                               placeholder="john@university.edu or 2026CS001"
+                               autocomplete="username" required
+                               aria-describedby="login-email-error">
+                        <div class="error-message" id="login-email-error" role="alert"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-password">Password <span aria-hidden="true">*</span></label>
+                        <input type="password" id="login-password" name="login-password"
+                               placeholder="Enter your password" minlength="8" required
+                               autocomplete="current-password"
+                               aria-describedby="login-password-error">
+                        <div class="error-message" id="login-password-error" role="alert"></div>
+                    </div>
+
+                    <button type="submit" class="login-btn-submit">Sign In</button>
+                </form>
+
+                <p class="form-footer">
+                    New to StudentHub? <a href="Register.html">Create an account</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="loginSuccessModal" role="dialog" aria-modal="true" aria-labelledby="loginSuccessTitle">
+        <div class="modal-content">
+            <button class="modal-close" id="loginModalClose" aria-label="Close">&times;</button>
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">✅</div>
+            <h2 id="loginSuccessTitle">Login Successful!</h2>
+            <p style="color:#666; margin-bottom:1.5rem;">You are now signed in to StudentHub.</p>
+            <button class="modal-ok" id="loginModalOk">Go to Dashboard</button>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div>
+                <a href="Home.html" class="footer-brand">Student<span>Hub</span></a>
+                <p>Your central hub for academics and campus life.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="Home.html">Home</a>
+                <a href="Dashboard.html">Dashboard</a>
+                <a href="Events.html">Events</a>
+            </div>
+            <div class="footer-links">
+                <h3>Support</h3>
+                <a href="About.html">About</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="Contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 StudentHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mainNav = document.getElementById('mainNav');
+        if (hamburger && mainNav) {
+            hamburger.addEventListener('click', () => {
+                const isOpen = mainNav.classList.toggle('open');
+                hamburger.classList.toggle('active', isOpen);
+                hamburger.setAttribute('aria-expanded', isOpen);
+            });
+        }
+
+        const loginForm = document.getElementById('loginForm');
+        const loginEmail = document.getElementById('login-email');
+        const loginPassword = document.getElementById('login-password');
+        const loginSuccessModal = document.getElementById('loginSuccessModal');
+
+        function showLoginError(input, message) {
+            const errorEl = document.getElementById(input.id + '-error');
+            if (errorEl) {
+                errorEl.textContent = message;
+                errorEl.classList.add('show');
+            }
+            input.classList.add('invalid');
+            input.setAttribute('aria-invalid', 'true');
+        }
+
+        function clearLoginError(input) {
+            const errorEl = document.getElementById(input.id + '-error');
+            if (errorEl) {
+                errorEl.textContent = '';
+                errorEl.classList.remove('show');
+            }
+            input.classList.remove('invalid');
+            input.setAttribute('aria-invalid', 'false');
+        }
+
+        function validateLoginEmail() {
+            const value = loginEmail.value.trim();
+            if (!value) {
+                showLoginError(loginEmail, 'Email or Student ID is required.');
+                return false;
+            }
+            if (value.length < 3) {
+                showLoginError(loginEmail, 'Enter a valid email or student ID.');
+                return false;
+            }
+            clearLoginError(loginEmail);
+            return true;
+        }
+
+        function validateLoginPassword() {
+            const value = loginPassword.value;
+            if (!value) {
+                showLoginError(loginPassword, 'Password is required.');
+                return false;
+            }
+            if (value.length < 8) {
+                showLoginError(loginPassword, 'Password must be at least 8 characters.');
+                return false;
+            }
+            clearLoginError(loginPassword);
+            return true;
+        }
+
+        loginEmail.addEventListener('blur', validateLoginEmail);
+        loginPassword.addEventListener('blur', validateLoginPassword);
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const emailOk = validateLoginEmail();
+            const passOk = validateLoginPassword();
+            if (emailOk && passOk) {
+                loginSuccessModal.classList.add('show');
+                document.getElementById('loginModalOk').focus();
+            } else {
+                const firstInvalid = loginForm.querySelector('.invalid');
+                if (firstInvalid) firstInvalid.focus();
+            }
+        });
+
+        function closeLoginModal() {
+            loginSuccessModal.classList.remove('show');
+        }
+
+        document.getElementById('loginModalClose').addEventListener('click', closeLoginModal);
+        document.getElementById('loginModalOk').addEventListener('click', () => {
+            closeLoginModal();
+            window.location.href = 'Dashboard.html';
+        });
+
+        loginSuccessModal.addEventListener('click', (e) => {
+            if (e.target === loginSuccessModal) closeLoginModal();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && loginSuccessModal.classList.contains('show')) {
+                closeLoginModal();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
